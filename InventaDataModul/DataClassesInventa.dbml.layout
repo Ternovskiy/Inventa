@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 15.625, 53.625" name="DataClassesInventa">
+  <DataContextMoniker Name="/DataClassesInventaDataContext" />
+  <nestedChildShapes>
+    <classShape Id="80ff8d43-c59b-4975-90fd-a38990d6d459" absoluteBounds="1.5, 35.625, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Адрес" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92c60300-f5c1-4f8b-8957-dae0e055a35d" absoluteBounds="1.5150000000000001, 36.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8ab4a0b3-21a6-4f32-a85e-b4d2d74f90f1" absoluteBounds="1.75, 48.75, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Юридическое_лицо" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b67c29fe-6d6c-4c56-b543-551bcd11c636" absoluteBounds="1.7650000000000001, 49.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2fd5cb30-5b89-462b-b340-79b6cad0586a" absoluteBounds="6.25, 6.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Вид_показателя" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2ba013b-0e41-4e98-a51e-0309ee8c9a33" absoluteBounds="6.265, 7.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5f9e0e20-38bd-4ddf-aba7-7f6f9d5aae0e" absoluteBounds="7.25, 27.125, 2, 2.3478011067708309">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Документ_работ" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d7661de6-d57f-49ab-8d36-1f0af235a056" absoluteBounds="7.265, 27.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9cc6abfa-f18e-4c05-bba0-1aa3b19426ff" absoluteBounds="1.75, 46.625, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Должность" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d06f089-1ffc-4d89-a1be-365228576349" absoluteBounds="1.7650000000000001, 47.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60119aff-cf17-4667-be98-4260b296ddf1" absoluteBounds="6.25, 8.875, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Единицы_измерения" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da218a64-ffc3-4a0d-8622-5d946b071eef" absoluteBounds="6.265, 9.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ffefc494-71bf-4b5b-a971-fc6987733fce" absoluteBounds="0.75, 15, 2, 1.3862939453124969">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Журнал" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ffaf4eb0-0a83-4134-803c-273e5a567c7e" absoluteBounds="0.765, 15.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7f20736a-003e-4432-990a-51aa39fa3ef1" absoluteBounds="0.75, 21.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Лог" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0ee2af34-8144-4b90-a881-cd440224e9d6" absoluteBounds="0.765, 21.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bb0b095c-faa8-4c05-a56c-bcb41b5f4da6" absoluteBounds="1.75, 33.5, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Населенный_пункт" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d353227-1e54-4603-8ba7-fe5fc2b899bb" absoluteBounds="1.7650000000000001, 33.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b513b98d-8d4e-410a-9641-36b25c2f8bf8" absoluteBounds="3.5, 3.875, 2, 2.155499674479167">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Событие" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7a2fb976-5c0e-4dba-b386-ff608ba0163c" absoluteBounds="3.515, 4.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d0975d6e-1947-44ca-a263-c57561c9a3f1" absoluteBounds="1.5, 24.25, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Тег" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0725fadf-e57a-425d-a870-db60fbe3b773" absoluteBounds="1.5150000000000001, 24.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d33487f9-ab30-4f07-9c8e-44bf82db3022" absoluteBounds="1.5, 18.125, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Тип_журнала" />
+      <nestedChildShapes>
+        <elementListCompartment Id="650a2b97-d9a2-4de7-a0a5-3190c4e4a32f" absoluteBounds="1.5150000000000001, 18.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c8d9bec7-86c6-40e5-9404-3776c2a23f63" absoluteBounds="1.5, 26.375, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Тип_лога" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f808d3fd-b249-4798-99c9-2e5138284182" absoluteBounds="1.5150000000000001, 26.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bef1f226-f81b-4682-82a3-601518809490" absoluteBounds="2, 28.625, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Тип_населенного_пункта" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e0a48b4-c93d-4620-a162-47409bdb7de4" absoluteBounds="2.015, 29.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="17e7dfcd-2f30-4d10-b528-1a076da4d6e6" absoluteBounds="6.25, 4.375, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Тип_показателя" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c627b56-2512-4041-8458-9e88c61700ff" absoluteBounds="6.265, 4.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9f9b6453-d4ac-45d5-85f5-6321bd1cc30f" absoluteBounds="4.5, 25.375, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Тип_работ" />
+      <nestedChildShapes>
+        <elementListCompartment Id="73596d0d-3121-4bcf-8420-b9fd95a8cedb" absoluteBounds="4.515, 25.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d17b851c-e5ba-4beb-9007-dbd6eb5d09dd" absoluteBounds="2, 41.75, 2, 1.1939925130208309">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Тип_улицы" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a63bdf8b-f40e-46a2-8853-95fbb2f9f44e" absoluteBounds="2.015, 42.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="43c76799-88f0-4dea-897a-d1007753cdfd" absoluteBounds="2, 52, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Тип_юр__лица" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1defb6ba-aad1-4cdf-bb64-37bfddfa28a5" absoluteBounds="2.015, 52.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d514eb4a-5570-4dbb-90d7-5fe25bd70916" absoluteBounds="1.75, 38.625, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Улица" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d1806dc9-b5cc-4b73-9811-a8882522e6af" absoluteBounds="1.7650000000000001, 39.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e1793f21-d8ce-468e-bd38-56b07ea3de3b" absoluteBounds="1.75, 43.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Физическое_лицо" />
+      <nestedChildShapes>
+        <elementListCompartment Id="77c81cb7-e3e4-419d-b3d7-eba2a18393f3" absoluteBounds="1.7650000000000001, 44.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="25f7f3f3-489a-4e37-ae0e-78310e980a53" absoluteBounds="4.5, 43.625, 2, 1.9631982421875023">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Фр__труд__договора" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0cd6628a-9142-44e4-b59e-ca405dae3882" absoluteBounds="4.515, 44.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81d9b22b-826c-4925-ae33-02d0493b3bdb" absoluteBounds="0.75, 30.75, 2, 1.578595377604163">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Хост" />
+      <nestedChildShapes>
+        <elementListCompartment Id="788fc334-f7f9-4d17-8627-65a92400ddb2" absoluteBounds="0.765, 31.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.45863627929687 : 50.7131982421875); (2.45863627929687 : 50.9631982421875); (3.05523818359375 : 50.9631982421875); (3.05523818359375 : 50.7131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Юридическое_лицо/Юридическое_лицо_Юридическое_лицо" />
+      <nodes>
+        <classShapeMoniker Id="8ab4a0b3-21a6-4f32-a85e-b4d2d74f90f1" />
+        <classShapeMoniker Id="8ab4a0b3-21a6-4f32-a85e-b4d2d74f90f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 34.8862939453125); (2.625 : 35.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Населенный_пункт/Населенный_пункт_Адрес" />
+      <nodes>
+        <classShapeMoniker Id="bb0b095c-faa8-4c05-a56c-bcb41b5f4da6" />
+        <classShapeMoniker Id="80ff8d43-c59b-4975-90fd-a38990d6d459" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 15.6931469726562); (4.16666666666667 : 15.6931469726562 : JumpStart); (4.33333333333333 : 15.6931469726562 : JumpEnd); (4.5 : 15.6931469726562); (4.5 : 6.03049967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Журнал/Журнал_Событие" />
+      <nodes>
+        <classShapeMoniker Id="ffefc494-71bf-4b5b-a971-fc6987733fce" />
+        <classShapeMoniker Id="b513b98d-8d4e-410a-9641-36b25c2f8bf8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 21.9142976888021); (4.16666666666667 : 21.9142976888021 : JumpStart); (4.33333333333333 : 21.9142976888021 : JumpEnd); (5.0312525 : 21.9142976888021); (5.0312525 : 6.03049967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Лог/Лог_Событие" />
+      <nodes>
+        <classShapeMoniker Id="7f20736a-003e-4432-990a-51aa39fa3ef1" />
+        <classShapeMoniker Id="b513b98d-8d4e-410a-9641-36b25c2f8bf8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 24.25); (2.125 : 22.7035953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Тег/Тег_Лог" />
+      <nodes>
+        <classShapeMoniker Id="d0975d6e-1947-44ca-a263-c57561c9a3f1" />
+        <classShapeMoniker Id="7f20736a-003e-4432-990a-51aa39fa3ef1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.125 : 18.125); (2.125 : 16.3862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Тип_журнала/Тип_журнала_Журнал" />
+      <nodes>
+        <classShapeMoniker Id="d33487f9-ab30-4f07-9c8e-44bf82db3022" />
+        <classShapeMoniker Id="ffefc494-71bf-4b5b-a971-fc6987733fce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5 : 27.0681469726563); (1.1249995 : 27.0681469726563); (1.1249995 : 22.7035953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Тип_лога/Тип_лога_Лог" />
+      <nodes>
+        <classShapeMoniker Id="c8d9bec7-86c6-40e5-9404-3776c2a23f63" />
+        <classShapeMoniker Id="7f20736a-003e-4432-990a-51aa39fa3ef1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.28125 : 29.8189925130208); (3.28125 : 33.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Тип_населенного_пункта/Тип_населенного_пункта_Населенный_пункт" />
+      <nodes>
+        <classShapeMoniker Id="bef1f226-f81b-4682-82a3-601518809490" />
+        <classShapeMoniker Id="bb0b095c-faa8-4c05-a56c-bcb41b5f4da6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 25.9719962565104); (7.7187475 : 25.9719962565104); (7.7187475 : 27.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Тип_работ/Тип_работ_Документ_работ" />
+      <nodes>
+        <classShapeMoniker Id="9f9b6453-d4ac-45d5-85f5-6321bd1cc30f" />
+        <classShapeMoniker Id="5f9e0e20-38bd-4ddf-aba7-7f6f9d5aae0e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.46511909179688 : 52); (3.46511909179688 : 50.7131982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Тип_юр__лица/Тип_юр__лица_Юридическое_лицо" />
+      <nodes>
+        <classShapeMoniker Id="43c76799-88f0-4dea-897a-d1007753cdfd" />
+        <classShapeMoniker Id="8ab4a0b3-21a6-4f32-a85e-b4d2d74f90f1" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.625 : 38.625); (2.625 : 37.3958968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Улица/Улица_Адрес" />
+      <nodes>
+        <classShapeMoniker Id="d514eb4a-5570-4dbb-90d7-5fe25bd70916" />
+        <classShapeMoniker Id="80ff8d43-c59b-4975-90fd-a38990d6d459" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.875 : 41.75); (2.875 : 40.0112939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Тип_улицы/Тип_улицы_Улица" />
+      <nodes>
+        <classShapeMoniker Id="d17b851c-e5ba-4beb-9007-dbd6eb5d09dd" />
+        <classShapeMoniker Id="d514eb4a-5570-4dbb-90d7-5fe25bd70916" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.7513612283153 : 43.75); (1.5013612283153 : 43.5); (1.5013612283153 : 37.3958968098958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Физическое_лицо/Физическое_лицо_Адрес" />
+      <nodes>
+        <classShapeMoniker Id="e1793f21-d8ce-468e-bd38-56b07ea3de3b" />
+        <classShapeMoniker Id="80ff8d43-c59b-4975-90fd-a38990d6d459" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 43.625); (5.5 : 28.2989005533854); (7.25 : 28.2989005533854)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Фр__труд__договора/Фр__труд__договора_Документ_работ" />
+      <nodes>
+        <classShapeMoniker Id="25f7f3f3-489a-4e37-ae0e-78310e980a53" />
+        <classShapeMoniker Id="5f9e0e20-38bd-4ddf-aba7-7f6f9d5aae0e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.75 : 47.3181469726563); (5.5 : 47.3181469726563); (5.5 : 45.5881982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Должность/Должность_Фр__труд__договора" />
+      <nodes>
+        <classShapeMoniker Id="9cc6abfa-f18e-4c05-bba0-1aa3b19426ff" />
+        <classShapeMoniker Id="25f7f3f3-489a-4e37-ae0e-78310e980a53" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.75 : 44.6354484049479); (4.5 : 44.6354484049479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Физическое_лицо/Физическое_лицо_Фр__труд__договора" />
+      <nodes>
+        <classShapeMoniker Id="e1793f21-d8ce-468e-bd38-56b07ea3de3b" />
+        <classShapeMoniker Id="25f7f3f3-489a-4e37-ae0e-78310e980a53" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.75 : 49.7315991210938); (4.9687475 : 49.7315991210938); (4.9687475 : 45.5881982421875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Юридическое_лицо/Юридическое_лицо_Фр__труд__договора" />
+      <nodes>
+        <classShapeMoniker Id="8ab4a0b3-21a6-4f32-a85e-b4d2d74f90f1" />
+        <classShapeMoniker Id="25f7f3f3-489a-4e37-ae0e-78310e980a53" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.09375 : 30.75); (1.09375 : 28.030094749349); (4.16666666666667 : 28.030094749349 : JumpStart); (4.33333333333333 : 28.030094749349 : JumpEnd); (7.25 : 28.030094749349)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Хост/Хост_Документ_работ" />
+      <nodes>
+        <classShapeMoniker Id="81d9b22b-826c-4925-ae33-02d0493b3bdb" />
+        <classShapeMoniker Id="5f9e0e20-38bd-4ddf-aba7-7f6f9d5aae0e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 31.5392976888021); (3.19791666666667 : 31.5392976888021 : JumpStart); (3.36458333333333 : 31.5392976888021 : JumpEnd); (4.25 : 31.5392976888021); (4.25 : 6.03049967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Хост/Хост_Событие" />
+      <nodes>
+        <classShapeMoniker Id="81d9b22b-826c-4925-ae33-02d0493b3bdb" />
+        <classShapeMoniker Id="b513b98d-8d4e-410a-9641-36b25c2f8bf8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.59375 : 35.625); (1.59375 : 32.3285953776042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Адрес/Адрес_Хост" />
+      <nodes>
+        <classShapeMoniker Id="80ff8d43-c59b-4975-90fd-a38990d6d459" />
+        <classShapeMoniker Id="81d9b22b-826c-4925-ae33-02d0493b3bdb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cd724bb6-b1f1-44d8-86d4-a43b138e757c" absoluteBounds="10.625, 4.625, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Оборудование" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7e112327-27cd-4204-a6f4-fb47af120015" absoluteBounds="10.64, 5.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ae43e3be-2f92-4477-8a47-f2027b7a1eb3" absoluteBounds="10.625, 7.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Показатель" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16dc6f0b-86ad-4594-b175-b7ea1c3cc2d3" absoluteBounds="10.64, 7.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cf5fb316-9e5c-47e3-b697-087988ea7024" absoluteBounds="13.375, 7.875, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/ПоказательОборудование" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d8ff2094-f1c8-4bb4-82eb-dc31689ec935" absoluteBounds="13.39, 8.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(10.625 : 6.01369466145833); (8.78125 : 6.01369466145833); (8.78125 : 27.125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Оборудование/Оборудование_Документ_работ" />
+      <nodes>
+        <classShapeMoniker Id="cd724bb6-b1f1-44d8-86d4-a43b138e757c" />
+        <classShapeMoniker Id="5f9e0e20-38bd-4ddf-aba7-7f6f9d5aae0e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(3.75 : 48.751509152494); (4.12650915249399 : 48.375); (4.88541416666667 : 48.375 : JumpStart); (5.05208083333333 : 48.375 : JumpEnd); (10.25 : 48.375); (10.25 : 6.77089680989583); (10.625 : 6.39589680989583)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Юридическое_лицо/Юридическое_лицо_Оборудование" />
+      <nodes>
+        <classShapeMoniker Id="8ab4a0b3-21a6-4f32-a85e-b4d2d74f90f1" />
+        <classShapeMoniker Id="cd724bb6-b1f1-44d8-86d4-a43b138e757c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 7.81814697265625); (8.69791666666667 : 7.81814697265625 : JumpStart); (8.86458333333333 : 7.81814697265625 : JumpEnd); (10.1666666666667 : 7.81814697265625 : JumpStart); (10.3333333333333 : 7.81814697265625 : JumpEnd); (10.625 : 7.81814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Вид_показателя/Вид_показателя_Показатель" />
+      <nodes>
+        <classShapeMoniker Id="2fd5cb30-5b89-462b-b340-79b6cad0586a" />
+        <classShapeMoniker Id="ae43e3be-2f92-4477-8a47-f2027b7a1eb3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 9.26524983723958); (10.625 : 9.26524983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Единицы_измерения/Единицы_измерения_Показатель" />
+      <nodes>
+        <classShapeMoniker Id="60119aff-cf17-4667-be98-4260b296ddf1" />
+        <classShapeMoniker Id="ae43e3be-2f92-4477-8a47-f2027b7a1eb3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.3342307692308 : 9.65549967447917); (11.3342307692308 : 9.90549967447917); (11.9296153846154 : 9.90549967447917); (11.9296153846154 : 9.65549967447917)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Показатель/Показатель_Показатель" />
+      <nodes>
+        <classShapeMoniker Id="ae43e3be-2f92-4477-8a47-f2027b7a1eb3" />
+        <classShapeMoniker Id="ae43e3be-2f92-4477-8a47-f2027b7a1eb3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(8.25 : 5.56899251302083); (8.625 : 5.94399251302083); (8.625 : 8.88544840494792); (8.69791666666667 : 8.88544840494792 : JumpStart); (8.86458333333333 : 8.88544840494792 : JumpEnd); (10.1666666666667 : 8.88544840494792 : JumpStart); (10.3333333333333 : 8.88544840494792 : JumpEnd); (10.625 : 8.88544840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Тип_показателя/Тип_показателя_Показатель" />
+      <nodes>
+        <classShapeMoniker Id="17e7dfcd-2f30-4d10-b528-1a076da4d6e6" />
+        <classShapeMoniker Id="ae43e3be-2f92-4477-8a47-f2027b7a1eb3" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.625 : 5.51044840494792); (14.375 : 5.51044840494792); (14.375 : 7.875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Оборудование/Оборудование_ПоказательОборудование" />
+      <nodes>
+        <classShapeMoniker Id="cd724bb6-b1f1-44d8-86d4-a43b138e757c" />
+        <classShapeMoniker Id="cf5fb316-9e5c-47e3-b697-087988ea7024" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(12.625 : 8.56814697265625); (13.375 : 8.56814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Показатель/Показатель_ПоказательОборудование" />
+      <nodes>
+        <classShapeMoniker Id="ae43e3be-2f92-4477-8a47-f2027b7a1eb3" />
+        <classShapeMoniker Id="cf5fb316-9e5c-47e3-b697-087988ea7024" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="dbf5a04c-a314-439c-904f-c54f4c3cdaca" absoluteBounds="0.75, 4, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/DataClassesInventaDataContext/Состояние_оборудования" />
+      <nestedChildShapes>
+        <elementListCompartment Id="82392337-0126-4be4-8951-7caa09bbb262" absoluteBounds="0.76500000000000012, 4.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 4.59699625651042); (3.5 : 4.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Состояние_оборудования/Состояние_оборудования_Событие" />
+      <nodes>
+        <classShapeMoniker Id="dbf5a04c-a314-439c-904f-c54f4c3cdaca" />
+        <classShapeMoniker Id="b513b98d-8d4e-410a-9641-36b25c2f8bf8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 5.19399251302083); (1.75 : 8.50564697265625); (4.16666666666667 : 8.50564697265625 : JumpStart); (4.33333333333333 : 8.50564697265625 : JumpEnd); (4.41666666666667 : 8.50564697265625 : JumpStart); (4.58333333333333 : 8.50564697265625 : JumpEnd); (4.94791916666667 : 8.50564697265625 : JumpStart); (5.11458583333333 : 8.50564697265625 : JumpEnd); (8.54166666666667 : 8.50564697265625 : JumpStart); (8.86458333333333 : 8.50564697265625 : JumpEnd); (10.1666666666667 : 8.50564697265625 : JumpStart); (10.3333333333333 : 8.50564697265625 : JumpEnd); (10.625 : 8.50564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesInventaDataContext/Состояние_оборудования/Состояние_оборудования_Показатель" />
+      <nodes>
+        <classShapeMoniker Id="dbf5a04c-a314-439c-904f-c54f4c3cdaca" />
+        <classShapeMoniker Id="ae43e3be-2f92-4477-8a47-f2027b7a1eb3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

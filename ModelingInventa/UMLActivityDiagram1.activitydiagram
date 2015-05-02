@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d00bbbf3-5efa-4e89-80cd-1e64ddb8d263" name="Activity1" linkedPackageId="c2421f92-9d86-40bd-bf11-90a81a38ac46" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="d0643495-896d-4922-af8f-28579986938e">
+      <elementDefinition Id="6d915e5a-87bc-49ce-8f29-3643a9c61d29" />
+      <body>Ошибка приемлемого уровня</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="2fdbe430-2d00-48fd-943f-6436523c5682" LastKnownName="Ошибка приемлемого уровня" />
+      </annotatedElements>
+    </comment>
+    <comment Id="4fd628e8-f4be-4197-a2f0-60b6a837d114">
+      <elementDefinition Id="955cbc81-b02d-4e89-bb61-cdce84dffa96" />
+      <body>Есть обучаюшие пары</body>
+      <annotatedElements>
+        <decisionNodeMoniker Id="eb3648f5-79f8-45c6-beb3-969f4445f020" LastKnownName="Decision1" />
+      </annotatedElements>
+    </comment>
+    <comment Id="6ff1baaf-f2b7-4944-bba0-16c4c44ca680">
+      <elementDefinition Id="c89623c7-d030-408a-abfd-a7e41b0c2698" />
+      <body>Проход вперед</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="6361faf2-d73e-4e4b-924d-c1d6f225c0a5" LastKnownName="Определение ошибки скрытых слоев" />
+      </annotatedElements>
+    </comment>
+    <comment Id="611dec4a-2e60-49e2-abba-48f8c05be9b5">
+      <elementDefinition Id="a83a1619-b6a1-45f3-8bc4-6fe8f4262039" />
+      <body>Обратный проход</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="a4ccbe33-ba6a-40f1-952a-7e0ced378a8a" LastKnownName="Коррекция весов" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="3fdd494a-3d8d-4be5-ae4c-01a7c8d16fed" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="ca526daf-2f23-4c44-81b5-7557ad9a7983" />
+        <nodes>
+          <initialNode Id="8b453e6e-cc1f-4499-97ec-b9be9e439802" name="Initial1" isLeaf="false">
+            <elementDefinition Id="e6fcdac4-41d1-4e7d-ad6c-274bdb335cb6" />
+            <flowNodeTargets>
+              <controlFlow Id="36c69bce-95d1-4da7-a29d-c8c6bab7d313" isLeaf="false">
+                <opaqueActionMoniker Id="e963b72c-44ee-4bab-b13f-e3e2f1808efb" LastKnownName="Формирование обучающей выборки" />
+                <elementDefinition Id="b7082ed5-997c-434a-8a7c-d9c355d533cf" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="e963b72c-44ee-4bab-b13f-e3e2f1808efb" name="Формирование обучающей выборки" isLeaf="false">
+            <elementDefinition Id="eee5da31-23f9-4093-a210-7f4d9b2ae178" />
+            <flowNodeTargets>
+              <controlFlow Id="9b0585de-9def-4ff7-a01e-a64b441a25a8" isLeaf="false">
+                <opaqueActionMoniker Id="616903a0-77b8-4bbc-98dd-426daaac9f5f" LastKnownName="Нормализация выборки" />
+                <elementDefinition Id="e5e8a72b-c2d4-4aca-b0fb-d2db7cbd25b1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="616903a0-77b8-4bbc-98dd-426daaac9f5f" name="Нормализация выборки" isLeaf="false">
+            <elementDefinition Id="7a197a0b-2f1d-497b-8f68-ff54b75f2a68" />
+            <flowNodeTargets>
+              <controlFlow Id="0c2907a3-e58d-4981-9d94-4f3127128d1c" isLeaf="false">
+                <opaqueActionMoniker Id="56865bb3-1f32-44bc-8d68-b7c7df4d9656" LastKnownName="Выбор структуры сети" />
+                <elementDefinition Id="09408065-53b9-455e-962d-5ba3c019cb20" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a73225f6-c62d-4b65-b4da-bbd0c6f4e237" name="Инициализация  начальных весов" isLeaf="false">
+            <elementDefinition Id="d8a1dff7-3b3b-4ac2-92d8-b743a823cbaf" />
+            <flowNodeTargets>
+              <controlFlow Id="097435d2-7b35-4118-9fbb-c91dac1e75b8" isLeaf="false">
+                <joinNodeMoniker Id="2c5a514c-e703-4cae-baa3-0c7870c21a02" LastKnownName="Join1" />
+                <elementDefinition Id="dce15b3c-f37b-4cf3-8d21-ba106c7ab315" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="56865bb3-1f32-44bc-8d68-b7c7df4d9656" name="Выбор структуры сети" isLeaf="false">
+            <elementDefinition Id="15935a08-58ca-4aee-92e1-c7858ddacbc8" />
+            <flowNodeTargets>
+              <controlFlow Id="bd8569d3-6e3f-42e3-9c2d-3e018c42e8ec" isLeaf="false">
+                <opaqueActionMoniker Id="a73225f6-c62d-4b65-b4da-bbd0c6f4e237" LastKnownName="Инициализация  начальных весов" />
+                <elementDefinition Id="7bd1429a-cbad-4962-98c8-da70fbabe376" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="721996e8-123c-4e8d-ae25-31cf76364db6" name="Выбор обучающей пары" isLeaf="false">
+            <elementDefinition Id="fe28e2c4-d250-40b1-a387-ee6178e59dce" />
+            <flowNodeTargets>
+              <controlFlow Id="24de8aaf-1bff-46f6-8f51-5d7945eda153" isLeaf="false">
+                <opaqueActionMoniker Id="ca2a7487-35ac-46e9-b9fa-a7ed2d359fdd" LastKnownName="Вычислить выход сети" />
+                <elementDefinition Id="07af9568-69b4-4825-9502-e9351141a616" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="ca2a7487-35ac-46e9-b9fa-a7ed2d359fdd" name="Вычислить выход сети" isLeaf="false">
+            <elementDefinition Id="edfcadab-1a74-42e2-a04c-598c7008bbc4" />
+            <flowNodeTargets>
+              <controlFlow Id="360729b1-42cd-4cc1-8164-5fcf2327656e" isLeaf="false">
+                <opaqueActionMoniker Id="0380cafb-926e-4ba9-9c71-91a950669300" LastKnownName="Определение ошибки выходного слоя" />
+                <elementDefinition Id="3244a25f-9aa2-4ce9-a0f4-d3c56b5b524d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="0380cafb-926e-4ba9-9c71-91a950669300" name="Определение ошибки выходного слоя" isLeaf="false">
+            <elementDefinition Id="f81881ef-b296-4a9a-a212-f4e9fd801c2a" />
+            <flowNodeTargets>
+              <controlFlow Id="d34a4240-f534-478d-8f9a-216f06b26ec4" isLeaf="false">
+                <decisionNodeMoniker Id="2fdbe430-2d00-48fd-943f-6436523c5682" LastKnownName="Ошибка приемлемого уровня" />
+                <elementDefinition Id="eee6d04d-d552-4d5e-9df7-6433345d17c9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="6361faf2-d73e-4e4b-924d-c1d6f225c0a5" name="Определение ошибки скрытых слоев" isLeaf="false">
+            <elementDefinition Id="38e703ce-c111-45f5-8785-2eba046c35c5" />
+            <flowNodeTargets>
+              <controlFlow Id="f83d8042-e4a2-4e11-a3b8-b35ecf6a5dfd" isLeaf="false">
+                <opaqueActionMoniker Id="a4ccbe33-ba6a-40f1-952a-7e0ced378a8a" LastKnownName="Коррекция весов" />
+                <elementDefinition Id="c99d481c-3fc4-4375-b776-7770328847e1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="a4ccbe33-ba6a-40f1-952a-7e0ced378a8a" name="Коррекция весов" isLeaf="false">
+            <elementDefinition Id="bd559b2f-f055-42d7-a0a6-b96cc3d391f5" />
+            <flowNodeTargets>
+              <controlFlow Id="7f739591-42a2-4b15-9773-b753dc0efa1f" isLeaf="false">
+                <joinNodeMoniker Id="2c5a514c-e703-4cae-baa3-0c7870c21a02" LastKnownName="Join1" />
+                <elementDefinition Id="869e8311-704a-4a58-a94a-749ff370b673" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="2fdbe430-2d00-48fd-943f-6436523c5682" name="Ошибка приемлемого уровня" isLeaf="false">
+            <elementDefinition Id="e814dfa2-8519-4691-b853-c032297f627a" />
+            <flowNodeTargets>
+              <controlFlow Id="e0c6cb58-d91b-4b05-8380-b22711c4ea67" guard="-" name="Нет" isLeaf="false">
+                <opaqueActionMoniker Id="6361faf2-d73e-4e4b-924d-c1d6f225c0a5" LastKnownName="Определение ошибки скрытых слоев" />
+                <elementDefinition Id="bdc44f8c-a849-4604-831b-c8b2121ec5f7" />
+              </controlFlow>
+              <controlFlow Id="3cab7afb-0076-4b75-9050-a647d7a93bf8" isLeaf="false">
+                <joinNodeMoniker Id="2c5a514c-e703-4cae-baa3-0c7870c21a02" LastKnownName="Join1" />
+                <elementDefinition Id="467181f6-c583-48bd-bc8a-f60bb8015fb0" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode Id="eb3648f5-79f8-45c6-beb3-969f4445f020" name="Decision1" isLeaf="false">
+            <elementDefinition Id="6c14a814-ccc0-4ef2-bbb7-a88461c12186" />
+            <flowNodeTargets>
+              <controlFlow Id="248b8e94-7732-497f-9a0b-6f18f0c89d08" isLeaf="false">
+                <opaqueActionMoniker Id="721996e8-123c-4e8d-ae25-31cf76364db6" LastKnownName="Выбор обучающей пары" />
+                <elementDefinition Id="6e01eef4-5758-4c1a-bf2e-f3dbfcaec796" />
+              </controlFlow>
+              <controlFlow Id="32fb770a-79cd-438e-b082-98e2adf35eec" guard="-" isLeaf="false">
+                <activityFinalNodeMoniker Id="0ca481f2-ff95-41b6-8240-c1bb269c8925" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="c845308b-f259-483a-8d5e-8ab1c8a6d4e6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode Id="0ca481f2-ff95-41b6-8240-c1bb269c8925" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="2ef46f0a-f0aa-44c7-935f-233feff27bb1" />
+          </activityFinalNode>
+          <joinNode Id="2c5a514c-e703-4cae-baa3-0c7870c21a02" name="Join1" isLeaf="false">
+            <elementDefinition Id="f0b4ed6c-7d56-41b2-84a6-1fda7fe6f55d" />
+            <flowNodeTargets>
+              <controlFlow Id="996643fb-fe7b-4b98-9f1c-7c80c7890ebe" isLeaf="false">
+                <decisionNodeMoniker Id="eb3648f5-79f8-45c6-beb3-969f4445f020" LastKnownName="Decision1" />
+                <elementDefinition Id="ae11022c-0f4d-4a34-9ea1-3175851b461a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="c2421f92-9d86-40bd-bf11-90a81a38ac46" name="ModelingInventa">
+    <elementDefinition Id="6d5cfdaa-1edc-48ec-8d98-9a0dd0a6d2b2" />
+    <profileInstances>
+      <packageHasProfileInstances Id="05caedf2-7887-47be-b64e-e02d03c86579">
+        <profileInstance Id="72407f67-5ac1-4005-8264-3943c23473d7" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="59f74dfe-0291-4ce2-b058-6514e3c78f52">
+        <profileInstance Id="faf286b4-a928-4e29-866a-7410525adb45" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

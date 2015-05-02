@@ -1,0 +1,155 @@
+﻿@model IEnumerable<InventaDataModul.Тип_улицы>
+
+@{
+    ViewBag.Title = "Список Тип улиц";
+}
+
+<h2>Список Тип_улицы</h2>
+
+<p>
+    @Html.ActionLink("Создать", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Название)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Название)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Код }) |            
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Код })
+        </td>
+    </tr>
+}
+
+</table>
+
+
+ @* 
+ 
+		#region Тип_улицы
+        
+		/// <summary>
+        /// Набор таблиц Тип_улицы
+        /// </summary>
+        IQueryable<Тип_улицы> GetТип_улицы { get; }
+
+        /// <summary>
+        /// Таблица Тип_улицы по уникальному ключю
+        /// </summary>
+        /// <param name="id">Ключ таблицы Тип_улицы</param>
+        /// <returns></returns>
+        Тип_улицы GetByIdТип_улицы(int id);
+        
+        /// <summary>
+        /// Добавить в базу новый объект Тип_улицы
+        /// </summary>
+        /// <param name="instance">Объект Тип_улицы</param>
+        /// <returns></returns>
+        bool CreateТип_улицы(Тип_улицы instance);
+
+        /// <summary>
+        /// Редактировать объект Тип_улицы
+        /// </summary>
+        /// <param name="instance">Объет Тип_улицы</param>
+        /// <returns></returns>
+        bool UpdateТип_улицы(Тип_улицы instance);
+
+        /// <summary>
+        /// Удалить объет Тип_улицы(удаляется по уникальному ключю)
+        /// </summary>
+        /// <param name="instance">Объект Тип_улицы</param>
+        /// <returns></returns>
+        bool RemoveТип_улицы(Тип_улицы instance);
+        
+        #endregion
+===================================================================================================
+		#region Тип_улицы
+
+		public partial class Repository
+		{
+        public IQueryable<Тип_улицы> GetТип_улицы
+        {
+            get { return Db.Тип_улицы; }
+        }
+
+        public Тип_улицы GetByIdТип_улицы(int id)
+        {
+            return Db.Тип_улицы.FirstOrDefault(t => t.Код == id);
+        }
+
+        public bool CreateТип_улицы(Тип_улицы instance)
+        {
+            if (instance.Код==0)
+            {
+                Db.Тип_улицы.InsertOnSubmit(instance);
+                Db.Тип_улицы.Context.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool UpdateТип_улицы(Тип_улицы instance)
+        {
+
+            Тип_улицы cache = Db.Тип_улицы.FirstOrDefault(p => p.Код == instance.Код);
+            if (cache != null)
+            {
+						        
+            cache.Название= instance.Название;
+        
+			                
+                Db.Тип_улицы.Context.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool RemoveТип_улицы(Тип_улицы instance)
+        {
+            Тип_улицы cache = Db.Тип_улицы.FirstOrDefault(p => p.Код == instance.Код);
+            if (cache != null)
+            {
+                Db.Тип_улицы.DeleteOnSubmit(cache);
+                Db.Тип_улицы.Context.SubmitChanges();
+                return true;
+            }
+
+            return false;
+        }
+	}
+		#endregion
+==========================================================================================
+		#region Тип_улицы
+
+	[MetadataType(typeof(ModelViewТип_улицы))]
+		public partial class Тип_улицы
+		{        
+		}
+
+    
+		class ModelViewТип_улицы
+		{			
+									[Display(Name = "Название")]
+	        public string Название { get; set; }
+
+			 
+	   }
+
+	   #endregion
+=============================================================================================
+  *@ 
+
+
+
+
+
+
+

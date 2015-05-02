@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2835FDBA-96BA-4D5C-850D-A909BB12F4E3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>webInventa</RootNamespace>
+    <AssemblyName>MVC5Bootstrap-3-1-1-Less</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.Core">
+      <HintPath>..\packages\BundleTransformer.Core.1.8.23\lib\net40\BundleTransformer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BundleTransformer.Less">
+      <HintPath>..\packages\BundleTransformer.Less.1.8.25\lib\net40\BundleTransformer.Less.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.Core">
+      <HintPath>..\packages\JavaScriptEngineSwitcher.Core.1.1.0\lib\net40\JavaScriptEngineSwitcher.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.Msie">
+      <HintPath>..\packages\JavaScriptEngineSwitcher.Msie.1.1.2\lib\net40\JavaScriptEngineSwitcher.Msie.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="MsieJavaScriptEngine">
+      <HintPath>..\packages\MsieJavaScriptEngine.1.4.0\lib\net40\MsieJavaScriptEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.0.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc">
+      <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.3.2.0.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.1.1\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.1.1\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.1.1\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.1\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.1\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ReferenceController.cs" />
+    <Compile Include="Areas\Admin\Controllers\АдресController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Вид_показателяController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Документ_работController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ДолжностьController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Единицы_измеренияController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ЖурналController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ЛогController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Населенный_пунктController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ОборудованиеController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ПоказательController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ПоказательОборудованиеController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ПрогнозController.cs" />
+    <Compile Include="Areas\Admin\Controllers\СобытиеController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Состояние_оборудованияController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ТегController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Тип_журналаController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Тип_логаController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Тип_населенного_пунктаController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Тип_показателяController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Тип_работController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Тип_улицыController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Тип_юр__лицаController.cs" />
+    <Compile Include="Areas\Admin\Controllers\УлицаController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Физическое_лицоController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Фр__труд__договораController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ХостController.cs" />
+    <Compile Include="Areas\Admin\Controllers\Юридическое_лицоController.cs" />
+    <Compile Include="Areas\Equipment\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Equipment\EquipmentAreaRegistration.cs" />
+    <Compile Include="Areas\UserBoss\Controllers\HomeController.cs" />
+    <Compile Include="Areas\UserBoss\UserBossAreaRegistration.cs" />
+    <Compile Include="Areas\User\Controllers\HomeController.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
+    <Compile Include="CodeTemplates\MyCodeTemplate\Template1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Template1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TypeStreetController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\webInventa.mdf" />
+    <Content Include="App_Data\webInventa_log.ldf">
+      <DependentUpon>webInventa.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\wells.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\utilities.less" />
+    <Content Include="Content\bootstrap\type.less" />
+    <Content Include="Content\bootstrap\tooltip.less" />
+    <Content Include="Content\bootstrap\thumbnails.less" />
+    <Content Include="Content\bootstrap\theme.less" />
+    <Content Include="Content\bootstrap\tables.less" />
+    <Content Include="Content\bootstrap\scaffolding.less" />
+    <Content Include="Content\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\progress-bars.less" />
+    <Content Include="Content\bootstrap\print.less" />
+    <Content Include="Content\bootstrap\popovers.less" />
+    <Content Include="Content\bootstrap\panels.less" />
+    <Content Include="Content\bootstrap\pagination.less" />
+    <Content Include="Content\bootstrap\pager.less" />
+    <Content Include="Content\bootstrap\normalize.less" />
+    <Content Include="Content\bootstrap\navs.less" />
+    <Content Include="Content\bootstrap\navbar.less" />
+    <Content Include="Content\bootstrap\modals.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="Content\bootstrap\media.less" />
+    <Content Include="Content\bootstrap\list-group.less" />
+    <Content Include="Content\bootstrap\labels.less" />
+    <Content Include="Content\bootstrap\jumbotron.less" />
+    <Content Include="Content\bootstrap\input-groups.less" />
+    <Content Include="Content\bootstrap\grid.less" />
+    <Content Include="Content\bootstrap\glyphicons.less" />
+    <Content Include="Content\bootstrap\forms.less" />
+    <Content Include="Content\bootstrap\dropdowns.less" />
+    <Content Include="Content\bootstrap\component-animations.less" />
+    <Content Include="Content\bootstrap\code.less" />
+    <Content Include="Content\bootstrap\close.less" />
+    <Content Include="Content\bootstrap\carousel.less" />
+    <Content Include="Content\bootstrap\buttons.less" />
+    <Content Include="Content\bootstrap\button-groups.less" />
+    <Content Include="Content\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\bootstrap.less" />
+    <Content Include="Content\bootstrap\badges.less" />
+    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_улицы\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_лога\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_лога\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_лога\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_лога\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Улица\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Улица\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Улица\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Улица\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_улицы\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_улицы\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_улицы\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_населенного_пункта\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_населенного_пункта\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_населенного_пункта\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_населенного_пункта\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Населенный_пункт\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Населенный_пункт\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Населенный_пункт\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Населенный_пункт\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Физическое_лицо\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Физическое_лицо\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Физическое_лицо\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Физическое_лицо\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Должность\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Должность\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Должность\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Должность\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Адрес\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Адрес\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Адрес\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Адрес\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_юр__лица\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_юр__лица\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_юр__лица\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_юр__лица\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Юридическое_лицо\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Юридическое_лицо\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Юридическое_лицо\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Юридическое_лицо\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Фр__труд__договора\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Фр__труд__договора\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Фр__труд__договора\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Фр__труд__договора\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Хост\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Хост\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Хост\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Хост\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_работ\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_работ\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_работ\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_работ\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Тег\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Тег\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Тег\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Тег\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Оборудование\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Оборудование\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_показателя\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_показателя\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_показателя\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_показателя\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Вид_показателя\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Вид_показателя\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Вид_показателя\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Вид_показателя\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Единицы_измерения\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Единицы_измерения\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Единицы_измерения\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Единицы_измерения\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_журнала\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_журнала\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_журнала\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Тип_журнала\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Лог\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Показатель\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Показатель\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Показатель\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Показатель\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ПоказательОборудование\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ПоказательОборудование\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Оборудование\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Оборудование\ListПоказатели.cshtml" />
+    <Content Include="Areas\Admin\Views\Оборудование\EditListПоказатели.cshtml" />
+    <Content Include="Areas\Admin\Views\Документ_работ\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Состояние_оборудования\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Событие\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Журнал\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Reference\Index.cshtml" />
+    <Content Include="Areas\User\Views\web.config" />
+    <Content Include="Areas\UserBoss\Views\web.config" />
+    <Content Include="Areas\Equipment\Views\web.config" />
+    <None Include="BundleTransformer.Configuration.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Content\Site.less" />
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CodeTemplates\ApiControllerEmpty\Controller.cs.t4" />
+    <Content Include="CodeTemplates\ApiControllerEmpty\Controller.vb.t4" />
+    <Content Include="CodeTemplates\ApiControllerWithActions\Controller.cs.t4" />
+    <Content Include="CodeTemplates\ApiControllerWithActions\Controller.vb.t4" />
+    <Content Include="CodeTemplates\ApiControllerWithContext\Controller.cs.t4" />
+    <Content Include="CodeTemplates\ApiControllerWithContext\Controller.vb.t4" />
+    <Content Include="CodeTemplates\ApiDependencyCodeGenerator\Global.asax.cs.t4" />
+    <Content Include="CodeTemplates\ApiDependencyCodeGenerator\Global.asax.vb.t4" />
+    <Content Include="CodeTemplates\ApiDependencyCodeGenerator\Global.cs.t4" />
+    <Content Include="CodeTemplates\ApiDependencyCodeGenerator\Global.vb.t4" />
+    <Content Include="CodeTemplates\ApiDependencyCodeGenerator\WebApiConfig.cs.t4" />
+    <Content Include="CodeTemplates\ApiDependencyCodeGenerator\WebApiConfig.vb.t4" />
+    <Content Include="CodeTemplates\MvcArea\Area.cs.t4" />
+    <Content Include="CodeTemplates\MvcArea\web.cs.t4" />
+    <Content Include="CodeTemplates\MvcControllerEmpty\Controller.cs.t4" />
+    <Content Include="CodeTemplates\MvcControllerWithActions\Controller.cs.t4" />
+    <Content Include="CodeTemplates\MvcControllerWithContext\Controller.cs.t4" />
+    <Content Include="CodeTemplates\MvcMinimalDependencyCodeGenerator\Global.asax.cs.t4" />
+    <Content Include="CodeTemplates\MvcMinimalDependencyCodeGenerator\Global.cs.t4" />
+    <Content Include="CodeTemplates\MvcMinimalDependencyCodeGenerator\RouteConfig.cs.t4" />
+    <Content Include="CodeTemplates\MvcMinimalDependencyCodeGenerator\web.cs.t4" />
+    <Content Include="CodeTemplates\MvcViewWithoutModel\Empty.cs.t4" />
+    <Content Include="CodeTemplates\MvcViewWithoutModel\Imports.include.t4" />
+    <Content Include="CodeTemplates\MvcView\Create.cs.t4" />
+    <Content Include="CodeTemplates\MvcView\Delete.cs.t4" />
+    <Content Include="CodeTemplates\MvcView\Details.cs.t4" />
+    <Content Include="CodeTemplates\MvcView\Edit.cs.t4" />
+    <Content Include="CodeTemplates\MvcView\Empty.cs.t4" />
+    <Content Include="CodeTemplates\MvcView\Imports.include.t4" />
+    <Content Include="CodeTemplates\MvcView\List.cs.t4" />
+    <Content Include="CodeTemplates\MvcView\ModelMetadataFunctions.cs.include.t4" />
+    <Content Include="CodeTemplates\MyCodeTemplate\Template1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Template1.cs</LastGenOutput>
+    </Content>
+    <Content Include="ClassDiagram1.cd" />
+    <Content Include="ClassDiagram2.cd" />
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scripts\jquery-2.1.0.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-2.1.0.js" />
+    <Content Include="Scripts\jquery-2.1.0.min.js" />
+    <Content Include="Scripts\jquery-2.1.0.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.7.1.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\TypeStreet\Index.cshtml" />
+    <Content Include="Views\TypeStreet\Create.cshtml" />
+    <Content Include="Views\TypeStreet\Edit.cshtml" />
+    <Content Include="Views\TypeStreet\Delete.cshtml" />
+    <Content Include="Views\Home\NoAutorize.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Default\" />
+    <Folder Include="Areas\Admin\Views\Прогноз\" />
+    <Folder Include="Areas\CodeTemplates\" />
+    <Folder Include="Areas\Equipment\Models\" />
+    <Folder Include="Areas\Equipment\Views\Home\" />
+    <Folder Include="Areas\Equipment\Views\Shared\" />
+    <Folder Include="Areas\UserBoss\Models\" />
+    <Folder Include="Areas\UserBoss\Views\Home\" />
+    <Folder Include="Areas\UserBoss\Views\Shared\" />
+    <Folder Include="Areas\User\Models\" />
+    <Folder Include="Areas\User\Views\Home\" />
+    <Folder Include="Areas\User\Views\Shared\" />
+    <Folder Include="Views\Base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\InventaDataModul\InventaDataModul.csproj">
+      <Project>{b4ab065e-93b8-4024-9e4f-8788930937c9}</Project>
+      <Name>InventaDataModul</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53130</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53130/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

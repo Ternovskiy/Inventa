@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="InventaDataModul.Тип_улицы" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAgBAgBIEAAAAAARAEAAAABiCQAAAAAIoAAAAAAQAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Тип_лога" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgAgDAgBgEAAAAAARAEAAAABiCIAAAAAAoQAIAAAQAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Улица" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAxBAgBAEAAAAABTAEAAAABiiBAAQgAAoAAAAAAQAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Тип_населенного_пункта" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBQgBAEAAAAAAZAEAAAABiCAACAAAAoAAIAAAQAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Населенный_пункт" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAxBAgBAEAAAAAATBEAAAAByiBAAQgAAoAAAAAAQAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Физическое_лицо" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAAhBACFUAAAAQgATAcBABABiDjBEAgAAIAgAAAAEAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Должность" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAgBAiBAkAAABAARAEBAAABiCAAEAAACoEAAAAAQAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Адрес" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BQCkBQBBAAgAXABARAEASCARjDQAQEAEEIAAMAAAIAg=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Тип_юр__лица" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgHEgBgEAAAAAARAUAAAABiCIAAAAAAoAAIAAAQAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Юридическое_лицо" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BRAwHAnlAkAAgBgARAcJAAABiiAAEQAACoEAAIAAwAQ=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Фр__труд__договора" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAgTEABEDAhMAICcIEAAgQBjCAwEIAAIAAAAQAKAQA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Хост" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAjBBABgBAAAAICUAkABAABiGJAEAAAAFAAJAACAQA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Тип_работ" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAgBAEAAAAICVAEAAAABiCAAAAAAAoAAAAAAQQA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Тег" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgAgDAgBgEAAAAAARAEAAAABiCIAAAAAAoQAIAAAQAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Оборудование" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQCgDEABgIAKAEIKUAEAABABiCIwEIAgIAAAIQAAAQE=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Тип_показателя" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAgFAMEAAAAARgEAAAABiCAAAAAAAoAAAAAAQAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Вид_показателя" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAgFgMEAAAAARgEAAAABiCIAAAAAAoAAIAAAQAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Единицы_измерения" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAggBAgFAsEAABAARgEAAAABiCAAAAAACoEAAAAAQAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Тип_журнала" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAgBAEAAAAAARAEAAAARiGCQAAAAAoAAAAAAQAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Лог" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AUAgJAEBAgACAAACYBkAgAABiGAIEhAAAJAABIQCAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Показатель" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAigVAKVhIEGCEAARgEEC2ABiiBAwBIAooAgAwBAIBA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.ПоказательОборудование" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgBAAhAMAAAAgARgEAAAABiCAAACQAAIAAEgAAgIE=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Документ_работ" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQCwBAihgGAAIGAKQIMAAAABiisAEQAAAgAIIQAAwMg=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Состояние_оборудования" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgBBAHAIEAAAACQgsAAAABiGAAEAAAABAAAAACAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Событие" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCkPAABgCAAAEAIRIEEiAABiivYABAAAIAIMAAAIEg=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Журнал" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAwBAgBAEAAAAACQAkAAAABimAAEQCAAhAAAAACQAg=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="InventaDataModul.Repository" Collapsed="true">
+    <Position X="4" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AcsVBgElGQVGARCAlsS1vR0JscQRQ5KyI/Onjr4GSBc=</HashCode>
+      <FileName>Proxy\RepositiryRartial.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="InventaDataModul.Neuron" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAQ=</HashCode>
+      <FileName>NeuronNet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.NeuronLayer" Collapsed="true">
+    <Position X="2.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACAAAAAAQIAAAEAAAACAAAAIQ=</HashCode>
+      <FileName>NeuronNet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ViborkaListItem" Collapsed="true">
+    <Position X="5.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NeuronNet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.NeuronNet" Collapsed="true">
+    <Position X="2.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACABAIAQCAAECAAABAAAAAQQAAAQgQQhAAQAAQ=</HashCode>
+      <FileName>NeuronNet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewТип_улицы" Collapsed="true">
+    <Position X="2.25" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewТип_лога" Collapsed="true">
+    <Position X="5.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewУлица" Collapsed="true">
+    <Position X="5.75" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewТип_населенного_пункта" Collapsed="true">
+    <Position X="7.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewНаселенный_пункт" Collapsed="true">
+    <Position X="2.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewФизическое_лицо" Collapsed="true">
+    <Position X="7.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAEAAAAAgAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewДолжность" Collapsed="true">
+    <Position X="5.75" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewАдрес" Collapsed="true">
+    <Position X="0.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAgAAABAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewТип_юр__лица" Collapsed="true">
+    <Position X="4" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewЮридическое_лицо" Collapsed="true">
+    <Position X="2.25" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAkAAAAgAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewФр__труд__договора" Collapsed="true">
+    <Position X="4" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAEAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAKAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewХост" Collapsed="true">
+    <Position X="0.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAgAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewТип_работ" Collapsed="true">
+    <Position X="0.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewТег" Collapsed="true">
+    <Position X="2.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewОборудование" Collapsed="true">
+    <Position X="4" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAIAAAAAE=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewТип_показателя" Collapsed="true">
+    <Position X="7.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewВид_показателя" Collapsed="true">
+    <Position X="2.25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewЕдиницы_измерения" Collapsed="true">
+    <Position X="7.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewТип_журнала" Collapsed="true">
+    <Position X="4" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewЛог" Collapsed="true">
+    <Position X="0.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAQAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewПоказатель" Collapsed="true">
+    <Position X="5.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAgAAAABAgAAAIAAAAABAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewПоказательОборудование" Collapsed="true">
+    <Position X="7.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewДокумент_работ" Collapsed="true">
+    <Position X="4" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAEAAIEAAAAIAAAAAAAAAAAAAAAAIIAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewСостояние_оборудования" Collapsed="true">
+    <Position X="0.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewСобытие" Collapsed="true">
+    <Position X="5.75" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAhIAAAAAAAIIAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventaDataModul.ModelViewЖурнал" Collapsed="true">
+    <Position X="4" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelView\ModelMetaProxy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="InventaDataModul.IRepository" Collapsed="true">
+    <Position X="5.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AcsVBgElGQVGARCAhsS1vR0JscQRQ5KyI/Onjr4GSBc=</HashCode>
+      <FileName>IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

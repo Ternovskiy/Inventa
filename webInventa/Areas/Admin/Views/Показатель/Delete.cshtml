@@ -1,0 +1,72 @@
+﻿@model InventaDataModul.Показатель
+
+@{
+    ViewBag.Title = "Удаление Показатель";
+}
+
+<h2>Удаление в базе данных</h2>
+
+<h3>Удалить объект?</h3>
+<div>
+    <h4>Показатель</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Значение)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Значение)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Код_показателя)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Код_показателя)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Код_состояния)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Код_состояния)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Тип_показателя)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Тип_показателя)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Код_вида_показателя)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Код_вида_показателя)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Единицы_измерения)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Единицы_измерения)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.HiddenFor(m=>m.Код)
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("Вернуться к списку", "Index")
+        </div>
+    }
+</div>

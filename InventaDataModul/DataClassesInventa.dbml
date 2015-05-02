@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="webInventa" Class="DataClassesInventaDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDb)\v11.0;AttachDbFilename=&quot;D:\Cloud@Mail.Ru\9 семестр\asp mvc\webInventa2\webInventa\App_Data\webInventa.mdf&quot;;Initial Catalog=webInventa;Integrated Security=True" SettingsObjectName="InventaDataModul.Properties.Settings" SettingsPropertyName="webInventaConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Адрес" Member="Адрес">
+    <Type Name="Адрес">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Номер дома]" Member="Номер_дома" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код улицы]" Member="Код_улицы" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код нас пункта]" Member="Код_нас_пункта" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код физического лица]" Member="Код_физического_лица" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Адрес_Хост" Member="Хост" ThisKey="Код" OtherKey="Код_адреса" Type="Хост" />
+      <Association Name="Населенный_пункт_Адрес" Member="Населенный_пункт" ThisKey="Код_нас_пункта" OtherKey="Код" Type="Населенный_пункт" IsForeignKey="true" />
+      <Association Name="Улица_Адрес" Member="Улица" ThisKey="Код_улицы" OtherKey="Код" Type="Улица" IsForeignKey="true" />
+      <Association Name="Физическое_лицо_Адрес" Member="Физическое_лицо" ThisKey="Код_физического_лица" OtherKey="Код" Type="Физическое_лицо" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Юридическое лицо]" Member="Юридическое_лицо">
+    <Type Name="Юридическое_лицо">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Краткое название]" Member="Краткое_название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Телефон" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Код типа]" Member="Код_типа" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код юрид. лица]" Member="Код_юрид__лица" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Юридическое_лицо_Юридическое_лицо" Member="Юридическое_лицо2" ThisKey="Код" OtherKey="Код_юрид__лица" Type="Юридическое_лицо" />
+      <Association Name="Юридическое_лицо_Фр__труд__договора" Member="Фр__труд__договора" ThisKey="Код" OtherKey="Код_юр__лица" Type="Фр__труд__договора" />
+      <Association Name="Юридическое_лицо_Оборудование" Member="Оборудование" ThisKey="Код" OtherKey="Код_юр__лица" Type="Оборудование" />
+      <Association Name="Юридическое_лицо_Юридическое_лицо" Member="Юридическое_лицо1" ThisKey="Код_юрид__лица" OtherKey="Код" Type="Юридическое_лицо" IsForeignKey="true" />
+      <Association Name="Тип_юр__лица_Юридическое_лицо" Member="Тип_юр__лица" ThisKey="Код_типа" OtherKey="Код" Type="Тип_юр__лица" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Вид показателя]" Member="Вид_показателя">
+    <Type Name="Вид_показателя">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Описание" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Association Name="Вид_показателя_Показатель" Member="Показатель" ThisKey="Код" OtherKey="Код_вида_показателя" Type="Показатель" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Документ работ]" Member="Документ_работ">
+    <Type Name="Документ_работ">
+      <Column Name="Номер" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Дата" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Описание" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="[Код хоста]" Member="Код_хоста" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код фр. труд. дог.]" Member="Код_фр__труд__дог_" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код типа]" Member="Код_типа" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код оборудования]" Member="Код_оборудования" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Тип_работ_Документ_работ" Member="Тип_работ" ThisKey="Код_типа" OtherKey="Код" Type="Тип_работ" IsForeignKey="true" />
+      <Association Name="Фр__труд__договора_Документ_работ" Member="Фр__труд__договора" ThisKey="Код_фр__труд__дог_" OtherKey="Номер" Type="Фр__труд__договора" IsForeignKey="true" />
+      <Association Name="Хост_Документ_работ" Member="Хост" ThisKey="Код_хоста" OtherKey="Номер" Type="Хост" IsForeignKey="true" />
+      <Association Name="Оборудование_Документ_работ" Member="Оборудование" ThisKey="Код_оборудования" OtherKey="Номер" Type="Оборудование" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Должность" Member="Должность">
+    <Type Name="Должность">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Краткое название]" Member="Краткое_название" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Должность_Фр__труд__договора" Member="Фр__труд__договора" ThisKey="Код" OtherKey="Код_должности" Type="Фр__труд__договора" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Единицы измерения]" Member="Единицы_измерения">
+    <Type Name="Единицы_измерения">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Краткое название]" Member="Краткое_название" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Единицы_измерения_Показатель" Member="Показатель" ThisKey="Код" OtherKey="Единицы_измерения" Type="Показатель" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Журнал" Member="Журнал">
+    <Type Name="Журнал">
+      <Column Name="Номер" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Код типа]" Member="Код_типа" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Журнал_Событие" Member="Событие" ThisKey="Номер" OtherKey="Код_журнала" Type="Событие" />
+      <Association Name="Тип_журнала_Журнал" Member="Тип_журнала" ThisKey="Код_типа" OtherKey="Код" Type="Тип_журнала" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Лог" Member="Лог">
+    <Type Name="Лог">
+      <Column Name="Номер" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Сообщение" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Код тега]" Member="Код_тега" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код лога]" Member="Код_лога" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Лог_Событие" Member="Событие" ThisKey="Номер" OtherKey="Код_лога" Type="Событие" />
+      <Association Name="Тег_Лог" Member="Тег" ThisKey="Код_тега" OtherKey="Код" Type="Тег" IsForeignKey="true" />
+      <Association Name="Тип_лога_Лог" Member="Тип_лога" ThisKey="Код_лога" OtherKey="Код" Type="Тип_лога" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Населенный пункт]" Member="Населенный_пункт">
+    <Type Name="Населенный_пункт">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Код типа]" Member="Код_типа" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Населенный_пункт_Адрес" Member="Адрес" ThisKey="Код" OtherKey="Код_нас_пункта" Type="Адрес" />
+      <Association Name="Тип_населенного_пункта_Населенный_пункт" Member="Тип_населенного_пункта" ThisKey="Код_типа" OtherKey="Код" Type="Тип_населенного_пункта" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Событие" Member="Событие">
+    <Type Name="Событие">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Дата" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Описание" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="[Код журнала]" Member="Код_журнала" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код хоста]" Member="Код_хоста" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код лога]" Member="Код_лога" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Код состояния]" Member="Код_состояния" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Журнал_Событие" Member="Журнал" ThisKey="Код_журнала" OtherKey="Номер" Type="Журнал" IsForeignKey="true" />
+      <Association Name="Лог_Событие" Member="Лог" ThisKey="Код_лога" OtherKey="Номер" Type="Лог" IsForeignKey="true" />
+      <Association Name="Хост_Событие" Member="Хост" ThisKey="Код_хоста" OtherKey="Номер" Type="Хост" IsForeignKey="true" />
+      <Association Name="Состояние_оборудования_Событие" Member="Состояние_оборудования" ThisKey="Код_состояния" OtherKey="Номер" Type="Состояние_оборудования" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Тег" Member="Тег">
+    <Type Name="Тег">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Описание" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Тег_Лог" Member="Лог" ThisKey="Код" OtherKey="Код_тега" Type="Лог" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Тип журнала]" Member="Тип_журнала">
+    <Type Name="Тип_журнала">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Тип_журнала_Журнал" Member="Журнал" ThisKey="Код" OtherKey="Код_типа" Type="Журнал" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Тип лога]" Member="Тип_лога">
+    <Type Name="Тип_лога">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Описание" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Тип_лога_Лог" Member="Лог" ThisKey="Код" OtherKey="Код_лога" Type="Лог" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Тип населенного пункта]" Member="Тип_населенного_пункта">
+    <Type Name="Тип_населенного_пункта">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Тип_населенного_пункта_Населенный_пункт" Member="Населенный_пункт" ThisKey="Код" OtherKey="Код_типа" Type="Населенный_пункт" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Тип показателя]" Member="Тип_показателя">
+    <Type Name="Тип_показателя">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Тип_показателя_Показатель" Member="Показатель" ThisKey="Код" OtherKey="Тип_показателя" Type="Показатель" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Тип работ]" Member="Тип_работ">
+    <Type Name="Тип_работ">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Тип_работ_Документ_работ" Member="Документ_работ" ThisKey="Код" OtherKey="Код_типа" Type="Документ_работ" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Тип улицы]" Member="Тип_улицы">
+    <Type Name="Тип_улицы">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Тип_улицы_Улица" Member="Улица" ThisKey="Код" OtherKey="Код_типа" Type="Улица" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Тип юр. лица]" Member="Тип_юр__лица">
+    <Type Name="Тип_юр__лица">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Описание" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="Тип_юр__лица_Юридическое_лицо" Member="Юридическое_лицо" ThisKey="Код" OtherKey="Код_типа" Type="Юридическое_лицо" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Улица" Member="Улица">
+    <Type Name="Улица">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="[Код типа]" Member="Код_типа" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Улица_Адрес" Member="Адрес" ThisKey="Код" OtherKey="Код_улицы" Type="Адрес" />
+      <Association Name="Тип_улицы_Улица" Member="Тип_улицы" ThisKey="Код_типа" OtherKey="Код" Type="Тип_улицы" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Физическое лицо]" Member="Физическое_лицо">
+    <Type Name="Физическое_лицо">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Фамилия" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Имя" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Отчество" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Телефон" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Физическое_лицо_Адрес" Member="Адрес" ThisKey="Код" OtherKey="Код_физического_лица" Type="Адрес" />
+      <Association Name="Физическое_лицо_Фр__труд__договора" Member="Фр__труд__договора" ThisKey="Код" OtherKey="Код_физ__лица" Type="Фр__труд__договора" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Фр. труд. договора]" Member="Фр__труд__договора">
+    <Type Name="Фр__труд__договора">
+      <Column Name="Номер" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Дата приема]" Member="Дата_приема" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="[Дата увольнения]" Member="Дата_увольнения" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="[Код физ. лица]" Member="Код_физ__лица" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код юр. лица]" Member="Код_юр__лица" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код должности]" Member="Код_должности" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Фр__труд__договора_Документ_работ" Member="Документ_работ" ThisKey="Номер" OtherKey="Код_фр__труд__дог_" Type="Документ_работ" />
+      <Association Name="Должность_Фр__труд__договора" Member="Должность" ThisKey="Код_должности" OtherKey="Код" Type="Должность" IsForeignKey="true" />
+      <Association Name="Физическое_лицо_Фр__труд__договора" Member="Физическое_лицо" ThisKey="Код_физ__лица" OtherKey="Код" Type="Физическое_лицо" IsForeignKey="true" />
+      <Association Name="Юридическое_лицо_Фр__труд__договора" Member="Юридическое_лицо" ThisKey="Код_юр__лица" OtherKey="Код" Type="Юридическое_лицо" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Хост" Member="Хост">
+    <Type Name="Хост">
+      <Column Name="Номер" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[IP-адрес]" Member="IP_адрес" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Описание" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="[Код адреса]" Member="Код_адреса" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Хост_Документ_работ" Member="Документ_работ" ThisKey="Номер" OtherKey="Код_хоста" Type="Документ_работ" />
+      <Association Name="Хост_Событие" Member="Событие" ThisKey="Номер" OtherKey="Код_хоста" Type="Событие" />
+      <Association Name="Адрес_Хост" Member="Адрес" ThisKey="Код_адреса" OtherKey="Код" Type="Адрес" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Оборудование" Member="Оборудование">
+    <Type Name="Оборудование">
+      <Column Name="Номер" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Инвентарный номер]" Member="Инвентарный_номер" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Дата изготовления]" Member="Дата_изготовления" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Описание" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="[Код юр. лица]" Member="Код_юр__лица" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Оборудование_Документ_работ" Member="Документ_работ" ThisKey="Номер" OtherKey="Код_оборудования" Type="Документ_работ" />
+      <Association Name="Оборудование_ПоказательОборудование" Member="ПоказательОборудование" ThisKey="Номер" OtherKey="Код_Оборудования" Type="ПоказательОборудование" />
+      <Association Name="Юридическое_лицо_Оборудование" Member="Юридическое_лицо" ThisKey="Код_юр__лица" OtherKey="Код" Type="Юридическое_лицо" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Показатель" Member="Показатель">
+    <Type Name="Показатель">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Значение" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Код показателя]" Member="Код_показателя" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Код состояния]" Member="Код_состояния" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Тип показателя]" Member="Тип_показателя" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код вида показателя]" Member="Код_вида_показателя" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Единицы измерения]" Member="Единицы_измерения" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Показатель_Показатель" Member="Показатель2" ThisKey="Код" OtherKey="Код_показателя" Type="Показатель" />
+      <Association Name="Показатель_ПоказательОборудование" Member="ПоказательОборудование" ThisKey="Код" OtherKey="Код_Показателя" Type="ПоказательОборудование" />
+      <Association Name="Вид_показателя_Показатель" Member="Вид_показателя" ThisKey="Код_вида_показателя" OtherKey="Код" Type="Вид_показателя" IsForeignKey="true" />
+      <Association Name="Единицы_измерения_Показатель" Member="Единицы_измерения1" ThisKey="Единицы_измерения" OtherKey="Код" Type="Единицы_измерения" IsForeignKey="true" />
+      <Association Name="Показатель_Показатель" Member="Показатель1" ThisKey="Код_показателя" OtherKey="Код" Type="Показатель" IsForeignKey="true" />
+      <Association Name="Тип_показателя_Показатель" Member="Тип_показателя1" ThisKey="Тип_показателя" OtherKey="Код" Type="Тип_показателя" IsForeignKey="true" />
+      <Association Name="Состояние_оборудования_Показатель" Member="Состояние_оборудования" ThisKey="Код_состояния" OtherKey="Номер" Type="Состояние_оборудования" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ПоказательОборудование" Member="ПоказательОборудование">
+    <Type Name="ПоказательОборудование">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Код Оборудования]" Member="Код_Оборудования" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="[Код Показателя]" Member="Код_Показателя" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Оборудование_ПоказательОборудование" Member="Оборудование" ThisKey="Код_Оборудования" OtherKey="Номер" Type="Оборудование" IsForeignKey="true" />
+      <Association Name="Показатель_ПоказательОборудование" Member="Показатель" ThisKey="Код_Показателя" OtherKey="Код" Type="Показатель" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.[Состояние оборудования]" Member="Состояние_оборудования">
+    <Type Name="Состояние_оборудования">
+      <Column Name="Номер" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Номер состояния]" Member="Номер_состояния" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Состояние_оборудования_Событие" Member="Событие" ThisKey="Номер" OtherKey="Код_состояния" Type="Событие" />
+      <Association Name="Состояние_оборудования_Показатель" Member="Показатель" ThisKey="Номер" OtherKey="Код_состояния" Type="Показатель" />
+    </Type>
+  </Table>
+</Database>

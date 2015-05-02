@@ -1,0 +1,57 @@
+﻿@using Ninject.Infrastructure.Language
+@model IEnumerable<InventaDataModul.Оборудование>
+
+@{
+    ViewBag.Title = "Список Оборудование";
+}
+
+<h2>Список Оборудование</h2>
+
+<p>
+    @Html.ActionLink("Создать", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model=>model.Инвентарный_номер)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Дата_изготовления)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Описание)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_юр__лица)
+        </th>
+        <th>
+            @Html.DisplayName("Показатели")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Инвентарный_номер)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Дата_изготовления)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Описание)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Юридическое_лицо.Юр_лицо_Тип)
+        </td>
+        <td>
+            @Html.Action("ListПоказатели",new{id=item.Номер})
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Номер }) |            
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Номер })
+        </td>
+    </tr>
+}
+
+</table>

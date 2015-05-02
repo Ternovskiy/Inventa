@@ -1,0 +1,7 @@
+﻿@model IEnumerable<InventaDataModul.ПоказательОборудование>
+
+@foreach (var item in Model)
+{
+    @Html.DisplayFor(modelItem => item.Показатель.Представление)
+    <br/>
+}

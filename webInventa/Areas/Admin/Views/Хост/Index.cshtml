@@ -1,0 +1,44 @@
+﻿@model IEnumerable<InventaDataModul.Хост>
+
+@{
+    ViewBag.Title = "Список Хост";
+}
+
+<h2>Список Хост</h2>
+
+<p>
+    @Html.ActionLink("Создать", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.IP_адрес)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Описание)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_адреса)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IP_адрес)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Описание)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Адрес.АдресПунктУлицаДом)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Номер }) |            
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Номер })
+        </td>
+    </tr>
+}
+
+</table>

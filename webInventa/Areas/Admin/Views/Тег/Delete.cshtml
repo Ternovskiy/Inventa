@@ -1,0 +1,40 @@
+﻿@model InventaDataModul.Тег
+
+@{
+    ViewBag.Title = "Удаление Тег";
+}
+
+<h2>Удаление в базе данных</h2>
+
+<h3>Удалить объект?</h3>
+<div>
+    <h4>Тег</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Название)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Название)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Описание)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Описание)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.HiddenFor(m=>m.Код)
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("Вернуться к списку", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<InventaDataModul.Документ_работ>
+
+@{
+    ViewBag.Title = "Список Документ_работ";
+}
+
+<h2>Список Документ_работ</h2>
+
+<p>
+    @Html.ActionLink("Создать", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Название)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Дата)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Описание)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_хоста)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_фр__труд__дог_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_типа)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_оборудования)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Название)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Дата)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Описание)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Код_хоста)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Код_фр__труд__дог_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Код_типа)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Код_оборудования)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Номер }) |            
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Номер })
+        </td>
+    </tr>
+}
+
+</table>
+

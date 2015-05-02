@@ -1,0 +1,1018 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="6d5cfdaa-1edc-48ec-8d98-9a0dd0a6d2b2"
+  name="ModelingInventa" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="6d915e5a-87bc-49ce-8f29-3643a9c61d29">
+      <body>Ошибка приемлемого уровня</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="e814dfa2-8519-4691-b853-c032297f627a"
+          LastKnownName="Ошибка приемлемого уровня"
+          LastKnownLocation="ModelingInventa.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="955cbc81-b02d-4e89-bb61-cdce84dffa96">
+      <body>Есть обучаюшие пары</body>
+      <annotatedElements>
+        <decisionNodeMoniker
+          Id="6c14a814-ccc0-4ef2-bbb7-a88461c12186"
+          LastKnownName="Decision1"
+          LastKnownLocation="ModelingInventa.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="c89623c7-d030-408a-abfd-a7e41b0c2698">
+      <body>Проход вперед</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="38e703ce-c111-45f5-8785-2eba046c35c5"
+          LastKnownName="Определение ошибки скрытых слоев"
+          LastKnownLocation="ModelingInventa.uml" />
+      </annotatedElements>
+    </comment>
+    <comment
+      Id="a83a1619-b6a1-45f3-8bc4-6fe8f4262039">
+      <body>Обратный проход</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="bd559b2f-f055-42d7-a0a6-b96cc3d391f5"
+          LastKnownName="Коррекция весов"
+          LastKnownLocation="ModelingInventa.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="ca526daf-2f23-4c44-81b5-7557ad9a7983"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="e6fcdac4-41d1-4e7d-ad6c-274bdb335cb6"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b7082ed5-997c-434a-8a7c-d9c355d533cf"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="eee5da31-23f9-4093-a210-7f4d9b2ae178"
+                  LastKnownName="Формирование обучающей выборки"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="eee5da31-23f9-4093-a210-7f4d9b2ae178"
+            name="Формирование обучающей выборки"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e5e8a72b-c2d4-4aca-b0fb-d2db7cbd25b1"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7a197a0b-2f1d-497b-8f68-ff54b75f2a68"
+                  LastKnownName="Нормализация выборки"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="7a197a0b-2f1d-497b-8f68-ff54b75f2a68"
+            name="Нормализация выборки"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="09408065-53b9-455e-962d-5ba3c019cb20"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="15935a08-58ca-4aee-92e1-c7858ddacbc8"
+                  LastKnownName="Выбор структуры сети"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="d8a1dff7-3b3b-4ac2-92d8-b743a823cbaf"
+            name="Инициализация  начальных весов"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="dce15b3c-f37b-4cf3-8d21-ba106c7ab315"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="f0b4ed6c-7d56-41b2-84a6-1fda7fe6f55d"
+                  LastKnownName="Join1"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="15935a08-58ca-4aee-92e1-c7858ddacbc8"
+            name="Выбор структуры сети"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7bd1429a-cbad-4962-98c8-da70fbabe376"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d8a1dff7-3b3b-4ac2-92d8-b743a823cbaf"
+                  LastKnownName="Инициализация  начальных весов"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="fe28e2c4-d250-40b1-a387-ee6178e59dce"
+            name="Выбор обучающей пары"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="07af9568-69b4-4825-9502-e9351141a616"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="edfcadab-1a74-42e2-a04c-598c7008bbc4"
+                  LastKnownName="Вычислить выход сети"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="edfcadab-1a74-42e2-a04c-598c7008bbc4"
+            name="Вычислить выход сети"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3244a25f-9aa2-4ce9-a0f4-d3c56b5b524d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="f81881ef-b296-4a9a-a212-f4e9fd801c2a"
+                  LastKnownName="Определение ошибки выходного слоя"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="f81881ef-b296-4a9a-a212-f4e9fd801c2a"
+            name="Определение ошибки выходного слоя"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="eee6d04d-d552-4d5e-9df7-6433345d17c9"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="e814dfa2-8519-4691-b853-c032297f627a"
+                  LastKnownName="Ошибка приемлемого уровня"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="38e703ce-c111-45f5-8785-2eba046c35c5"
+            name="Определение ошибки скрытых слоев"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c99d481c-3fc4-4375-b776-7770328847e1"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="bd559b2f-f055-42d7-a0a6-b96cc3d391f5"
+                  LastKnownName="Коррекция весов"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="bd559b2f-f055-42d7-a0a6-b96cc3d391f5"
+            name="Коррекция весов"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="869e8311-704a-4a58-a94a-749ff370b673"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="f0b4ed6c-7d56-41b2-84a6-1fda7fe6f55d"
+                  LastKnownName="Join1"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="e814dfa2-8519-4691-b853-c032297f627a"
+            name="Ошибка приемлемого уровня"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bdc44f8c-a849-4604-831b-c8b2121ec5f7"
+                guard="-"
+                name="Нет"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="38e703ce-c111-45f5-8785-2eba046c35c5"
+                  LastKnownName="Определение ошибки скрытых слоев"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="467181f6-c583-48bd-bc8a-f60bb8015fb0"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="f0b4ed6c-7d56-41b2-84a6-1fda7fe6f55d"
+                  LastKnownName="Join1"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <decisionNode
+            Id="6c14a814-ccc0-4ef2-bbb7-a88461c12186"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6e01eef4-5758-4c1a-bf2e-f3dbfcaec796"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="fe28e2c4-d250-40b1-a387-ee6178e59dce"
+                  LastKnownName="Выбор обучающей пары"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="c845308b-f259-483a-8d5e-8ab1c8a6d4e6"
+                guard="-"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="2ef46f0a-f0aa-44c7-935f-233feff27bb1"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <activityFinalNode
+            Id="2ef46f0a-f0aa-44c7-935f-233feff27bb1"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <joinNode
+            Id="f0b4ed6c-7d56-41b2-84a6-1fda7fe6f55d"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ae11022c-0f4d-4a34-9ea1-3175851b461a"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="6c14a814-ccc0-4ef2-bbb7-a88461c12186"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="ModelingInventa.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="4bff5313-3267-44fb-b617-f0937d0d2ea4"
+        name="Сетевой администратор"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="8e730965-b352-4057-af0b-40efb37371ab"
+            isDerived="false"
+            sourceEndRoleName="Сетевой администратор"
+            targetEndRoleName="Авторизация"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8ca3f336-a856-45dd-bde8-c8f69397964c"
+              LastKnownName="Авторизация"
+              LastKnownLocation="ModelingInventa.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7e2c64c-bb8d-4393-8808-4450101ac2ef"
+                  name="Сетевой администратор"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="33ed5deb-ca49-4baf-aa45-116a4d4ce509"
+                  name="Авторизация"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e66b3e08-4268-46fc-b9a4-4faad7b5a337"
+            isDerived="false"
+            sourceEndRoleName="Сетевой администратор"
+            targetEndRoleName="Работа со справочниками и журналами"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a02d7ae8-cea9-4b0e-add0-e1afe2d068d3"
+              LastKnownName="Работа со справочниками и журналами"
+              LastKnownLocation="ModelingInventa.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="eb5b4808-2c16-4ece-9b05-70d9bbaea809"
+                  name="Сетевой администратор"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fe505b9d-c999-4662-a41e-7a8a1e467d9c"
+                  name="Работа со справочниками и журналами"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6be7e1d4-b8d0-4661-b631-b6be7ca753c9"
+            isDerived="false"
+            sourceEndRoleName="Сетевой администратор"
+            targetEndRoleName="Отчеты"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1e99628b-b3af-404e-813e-1b4f28ca287d"
+              LastKnownName="Отчеты"
+              LastKnownLocation="ModelingInventa.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9c633608-9ce6-47d3-a31d-f532f5e1b689"
+                  name="Сетевой администратор"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3a9b224d-b4bf-461e-bec2-6541e6bb38ae"
+                  name="Отчеты"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="ecda53f5-88f6-489e-9472-86f8f172fc4f"
+        name="Начальник отдела"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="10624cb6-6f45-47fd-8800-10ecc55d1457"
+            isDerived="false"
+            sourceEndRoleName="Начальник отдела"
+            targetEndRoleName="Авторизация"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8ca3f336-a856-45dd-bde8-c8f69397964c"
+              LastKnownName="Авторизация"
+              LastKnownLocation="ModelingInventa.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="52f83622-1056-489f-a95a-3927aa21936e"
+                  name="Начальник отдела"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8f80ed77-22d9-4a90-9a59-08c821cb8732"
+                  name="Авторизация"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e26fa8c3-a171-4615-a817-8184ded8cb63"
+            isDerived="false"
+            sourceEndRoleName="Начальник отдела"
+            targetEndRoleName="Работа со справочниками и журналами"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a02d7ae8-cea9-4b0e-add0-e1afe2d068d3"
+              LastKnownName="Работа со справочниками и журналами"
+              LastKnownLocation="ModelingInventa.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3e5654d3-a807-4cbd-a19b-9773edae66cb"
+                  name="Начальник отдела"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e4593c77-50f5-47ea-80ca-7e8ecc131ed5"
+                  name="Работа со справочниками и журналами"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="0fadd399-d2d3-4f87-bcd1-0bc09631aa12"
+            isDerived="false"
+            sourceEndRoleName="Начальник отдела"
+            targetEndRoleName="Отчеты"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="1e99628b-b3af-404e-813e-1b4f28ca287d"
+              LastKnownName="Отчеты"
+              LastKnownLocation="ModelingInventa.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b1e4778f-b1cd-4b2e-8b9d-04986fa1e3bb"
+                  name="Начальник отдела"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9700038e-8a29-4ee5-a82d-ac1c014ec8aa"
+                  name="Отчеты"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="6ef505a4-5766-4046-a878-556b532573f6"
+        name="Оборудование"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="2541ec5b-9308-4cc6-89a5-99b7fee0aa6a"
+            isDerived="false"
+            sourceEndRoleName="Оборудование"
+            targetEndRoleName="Авторизация"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8ca3f336-a856-45dd-bde8-c8f69397964c"
+              LastKnownName="Авторизация"
+              LastKnownLocation="ModelingInventa.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9618a136-d14b-44e4-854f-689e9c44e013"
+                  name="Оборудование"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9f9e6f38-e22e-4af0-a9aa-9977684270f7"
+                  name="Авторизация"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="fd3ffa79-0187-42c7-bfc8-ba11d6cb5849"
+            isDerived="false"
+            sourceEndRoleName="Оборудование"
+            targetEndRoleName="Мониторинг состояний"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="462616a8-a613-46bb-b87a-ee65bd34ad37"
+              LastKnownName="Мониторинг состояний"
+              LastKnownLocation="ModelingInventa.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c6c866b9-d922-48e0-8071-68c623320d8c"
+                  name="Оборудование"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6004c6d3-df28-4789-83c6-2a408748663d"
+                  name="Мониторинг состояний"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="70ab64a3-4382-43f4-b4d0-a874e875cc67"
+            isDerived="false"
+            sourceEndRoleName="Оборудование"
+            targetEndRoleName="Прием логов  оборудования"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e89669d1-5899-43cb-a422-05989b26a251"
+              LastKnownName="Прием логов  оборудования"
+              LastKnownLocation="ModelingInventa.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ff8f82e4-e1bb-4a50-8205-ecb02c7fb6fe"
+                  name="Оборудование"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7b7ecd79-98c0-453a-847e-3ec5db765435"
+                  name="Прием логов  оборудования"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="8ca3f336-a856-45dd-bde8-c8f69397964c"
+        name="Авторизация"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="4555d94f-830d-4884-a232-a32aafc375be">
+            <useCaseMoniker
+              Id="c621791e-14e5-455a-b5ff-06f74033b0fc"
+              LastKnownName="Вход в систему"
+              LastKnownLocation="ModelingInventa.uml" />
+          </include>
+          <include
+            Id="68734dc2-8330-4ea6-adca-2e06db3b17ac">
+            <useCaseMoniker
+              Id="b95352b4-03a0-4d64-96cd-34cba557dd7e"
+              LastKnownName="Выход из системы"
+              LastKnownLocation="ModelingInventa.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c621791e-14e5-455a-b5ff-06f74033b0fc"
+        name="Вход в систему"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b95352b4-03a0-4d64-96cd-34cba557dd7e"
+        name="Выход из системы"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="462616a8-a613-46bb-b87a-ee65bd34ad37"
+        name="Мониторинг состояний"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e89669d1-5899-43cb-a422-05989b26a251"
+        name="Прием логов  оборудования"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="fbd5bb7e-908a-4212-a80d-3a0eab0fd820"
+        name="Формирование отчета администрования"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="68d6a7a2-a37a-49ac-b7cf-be9dc4d340f1"
+        name="Формирование отчета прогнозирования"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="991b2eb1-12d3-4f35-a824-70f82082f708"
+            isDerived="false"
+            sourceEndRoleName="Формирование отчета прогнозирования"
+            targetEndRoleName="Нейросевое пронозирование"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="42656924-acab-4526-9a40-33007668df97"
+              LastKnownName="Нейросевое пронозирование"
+              LastKnownLocation="ModelingInventa.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b5fd7003-ff7c-4faf-bf96-b34191c8a8e3"
+                  name="Формирование отчета прогнозирования"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1afbdc6f-d177-4fdc-adad-476b89c2acc4"
+                  name="Нейросевое пронозирование"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="55c72151-685d-4a78-880e-ca5bc784d9ce"
+        name="Прикладной  программист"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="bc893c88-f3ef-48c3-a372-f67b49e99b1f"
+            isDerived="false"
+            sourceEndRoleName="Прикладной  программист"
+            targetEndRoleName="Авторизация"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="8ca3f336-a856-45dd-bde8-c8f69397964c"
+              LastKnownName="Авторизация"
+              LastKnownLocation="ModelingInventa.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cc1666a2-4f54-4353-8ca1-4bcad74a9419"
+                  name="Прикладной  программист"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c1cd2d45-a103-409b-9585-0d8d36696ba1"
+                  name="Авторизация"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d313196a-625a-4abf-aa69-a7af339ba847"
+            isDerived="false"
+            sourceEndRoleName="Прикладной  программист"
+            targetEndRoleName="Работа со справочниками и журналами"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a02d7ae8-cea9-4b0e-add0-e1afe2d068d3"
+              LastKnownName="Работа со справочниками и журналами"
+              LastKnownLocation="ModelingInventa.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="0b8b2be5-8a33-483f-8984-a2ca43ffab72"
+                  name="Прикладной  программист"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e2c027f3-e331-4f49-9967-9526c407d7a8"
+                  name="Работа со справочниками и журналами"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a02d7ae8-cea9-4b0e-add0-e1afe2d068d3"
+        name="Работа со справочниками и журналами"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="ca0ff472-d4a9-401d-bbc7-e786501b9ebe">
+            <useCaseMoniker
+              Id="5834d2f9-7aea-40c6-b743-0f26bb5a977e"
+              LastKnownName="Стравочные данные"
+              LastKnownLocation="ModelingInventa.uml" />
+          </include>
+          <include
+            Id="77f7d72a-d2c3-48de-b361-f18ce30e5ac4">
+            <useCaseMoniker
+              Id="166ccd4e-4151-4fa9-820a-4ecd00d55c83"
+              LastKnownName="Организации"
+              LastKnownLocation="ModelingInventa.uml" />
+          </include>
+          <include
+            Id="345da797-e2a7-4b85-85c8-587ffdac8efa">
+            <useCaseMoniker
+              Id="a6bad7cc-433d-4f53-8b4a-d12d16ba71b1"
+              LastKnownName="Сотрудники "
+              LastKnownLocation="ModelingInventa.uml" />
+          </include>
+          <include
+            Id="bb7b1a5e-3c69-4ccc-bea8-e9683722824c">
+            <useCaseMoniker
+              Id="c7421eae-9108-46a8-af89-5dd607b05e08"
+              LastKnownName="Оборудование"
+              LastKnownLocation="ModelingInventa.uml" />
+          </include>
+          <include
+            Id="875abbfc-1d47-4a70-9e45-62b5bbcfdbc9">
+            <useCaseMoniker
+              Id="ccc40efd-4164-4d57-a4bf-878a3e4e07ce"
+              LastKnownName="Хосты"
+              LastKnownLocation="ModelingInventa.uml" />
+          </include>
+          <include
+            Id="9649d4b7-6ab8-49ea-a635-efde3372b3a2">
+            <useCaseMoniker
+              Id="afe6f35b-e5f7-46ab-80e3-5962cefed041"
+              LastKnownName="Неисправности"
+              LastKnownLocation="ModelingInventa.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5834d2f9-7aea-40c6-b743-0f26bb5a977e"
+        name="Стравочные данные"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="166ccd4e-4151-4fa9-820a-4ecd00d55c83"
+        name="Организации"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a6bad7cc-433d-4f53-8b4a-d12d16ba71b1"
+        name="Сотрудники "
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c7421eae-9108-46a8-af89-5dd607b05e08"
+        name="Оборудование"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ccc40efd-4164-4d57-a4bf-878a3e4e07ce"
+        name="Хосты"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="afe6f35b-e5f7-46ab-80e3-5962cefed041"
+        name="Неисправности"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1e99628b-b3af-404e-813e-1b4f28ca287d"
+        name="Отчеты"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="6fb8eb2e-be94-41e7-b928-a463a7a242bf">
+            <useCaseMoniker
+              Id="fbd5bb7e-908a-4212-a80d-3a0eab0fd820"
+              LastKnownName="Формирование отчета администрования"
+              LastKnownLocation="ModelingInventa.uml" />
+          </extend>
+          <extend
+            Id="50bff305-c78f-4054-8015-7d74b949af1f">
+            <useCaseMoniker
+              Id="68d6a7a2-a37a-49ac-b7cf-be9dc4d340f1"
+              LastKnownName="Формирование отчета прогнозирования"
+              LastKnownLocation="ModelingInventa.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="42656924-acab-4526-9a40-33007668df97"
+        name="Нейросевое пронозирование"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

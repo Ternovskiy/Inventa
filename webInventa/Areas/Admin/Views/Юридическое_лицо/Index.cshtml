@@ -1,0 +1,59 @@
+﻿@model IEnumerable<InventaDataModul.Юридическое_лицо>
+
+@{
+    ViewBag.Title = "Список Юридическое лицо";
+}
+
+<h2>Список Юридическох лиц</h2>
+
+<p>
+    @Html.ActionLink("Создать", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+                  @Html.DisplayNameFor(model => model.Код_типа)
+              </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Название)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Краткое_название)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Телефон)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_юрид__лица)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Тип_юр__лица.Название)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Название)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Краткое_название)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Телефон)
+        </td>
+        
+        <td>
+           @Html.DisplayFor(modelItem => item.Юридическое_лицо1.Тип_юр__лица.Название) @Html.DisplayFor(modelItem => item.Юридическое_лицо1.Название)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Код }) |            
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Код })
+        </td>
+    </tr>
+}
+
+</table>
+
+

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<InventaDataModul.Показатель>
+
+@{
+    ViewBag.Title = "Список Показателей";
+}
+
+<h2>Список Показателей</h2>
+
+<p>
+    @Html.ActionLink("Создать", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Значение)
+        </th>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.Тип_показателя)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_вида_показателя)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Единицы_измерения)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model=>model.Представление)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Значение)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Тип_показателя1.Название)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Вид_показателя.Название)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Единицы_измерения1.Представление)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem=>item.Представление)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Код }) |            
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Код })
+        </td>
+    </tr>
+}
+
+</table>

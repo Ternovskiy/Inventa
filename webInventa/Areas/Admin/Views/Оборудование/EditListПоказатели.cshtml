@@ -1,0 +1,25 @@
+﻿@using System.Data.Entity.Core.Metadata.Edm
+@model IEnumerable<InventaDataModul.ПоказательОборудование>
+
+@foreach (var item in Model)
+{
+    <div class="form-group">
+        
+            @Html.Label("Показатель", htmlAttributes: new { @class = "control-label col-md-2" })
+
+        <div class="col-md-3">
+            @Html.DisplayFor(modelItem => item.Показатель.Представление)
+
+            @*@Html.DropDownListFor(modelItem => item.Показатель,
+            ViewBag.Drop as List<SelectListItem>, htmlAttributes: new { @class = "form-control" })*@
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-primary btn-sm">Изменить</button>
+            <button type="button" class="btn btn-default btn-sm">Удалить</button>
+        </div>
+    
+    </div>
+}
+
+
+

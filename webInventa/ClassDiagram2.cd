@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="webInventa.Controllers.BaseController" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\BaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.HomeController" Collapsed="true">
+    <Position X="7.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.АдресController" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\АдресController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Вид_показателяController" Collapsed="true">
+    <Position X="7.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Вид_показателяController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Документ_работController" Collapsed="true">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Документ_работController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.ДолжностьController" Collapsed="true">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\ДолжностьController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Единицы_измеренияController" Collapsed="true">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Единицы_измеренияController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.ЖурналController" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\ЖурналController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.ЛогController" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\ЛогController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Населенный_пунктController" Collapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Населенный_пунктController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.ОборудованиеController" Collapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAgAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\ОборудованиеController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.ПоказательController" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\ПоказательController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.ПрогнозController" Collapsed="true">
+    <Position X="2.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\ПрогнозController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.СобытиеController" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\СобытиеController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Состояние_оборудованияController" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Состояние_оборудованияController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.ТегController" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\ТегController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Тип_журналаController" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Тип_журналаController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Тип_логаController" Collapsed="true">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Тип_логаController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Тип_населенного_пунктаController" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Тип_населенного_пунктаController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Тип_показателяController" Collapsed="true">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Тип_показателяController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Тип_работController" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Тип_работController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Тип_улицыController" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Тип_улицыController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Тип_юр__лицаController" Collapsed="true">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Тип_юр__лицаController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.УлицаController" Collapsed="true">
+    <Position X="9.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\УлицаController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Физическое_лицоController" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Физическое_лицоController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Фр__труд__договораController" Collapsed="true">
+    <Position X="5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Фр__труд__договораController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.ХостController" Collapsed="true">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\ХостController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Areas.Admin.Controllers.Юридическое_лицоController" Collapsed="true">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Areas\Admin\Controllers\Юридическое_лицоController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="webInventa.Controllers.AccountController" Collapsed="true">
+    <Position X="5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAQCAAAgABAAEAEgEAAAABICIAAEAVAAQkAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

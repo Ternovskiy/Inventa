@@ -1,0 +1,51 @@
+﻿@model IEnumerable<InventaDataModul.Адрес>
+
+@{
+    ViewBag.Title = "Список Адрес";
+}
+
+<h2>Список Адресов</h2>
+
+<p>
+    @Html.ActionLink("Создать", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Номер_дома)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_улицы)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_нас_пункта)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_физического_лица)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Номер_дома)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Улица.Тип_улицы.Название) @Html.DisplayFor(modelItem => item.Улица.Название)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Населенный_пункт.Тип_населенного_пункта.Название) @Html.DisplayFor(modelItem => item.Населенный_пункт.Название)
+        </td>
+        <td>
+            @*@Html.DisplayFor(modelItem => item.Физическое_лицо.Фамилия) @Html.DisplayFor(modelItem => item.Физическое_лицо.Имя)*@
+        @Html.DisplayFor(modelItem => item.Физическое_лицо.ФамилияИО)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Код }) |            
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Код })
+        </td>
+    </tr>
+}
+
+</table>

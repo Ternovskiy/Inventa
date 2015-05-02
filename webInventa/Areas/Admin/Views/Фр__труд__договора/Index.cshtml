@@ -1,0 +1,56 @@
+﻿@model IEnumerable<InventaDataModul.Фр__труд__договора>
+
+@{
+    ViewBag.Title = "Список Фр__труд__договора";
+}
+
+<h2>Список Фрагментов трудового договора</h2>
+
+<p>
+    @Html.ActionLink("Создать", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Дата_приема)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Дата_увольнения)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_физ__лица)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_юр__лица)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Код_должности)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Дата_приема)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Дата_увольнения)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Физическое_лицо.ФамилияИО)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Юридическое_лицо.Юр_лицо_Тип)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Должность.Название)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Номер }) |            
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Номер })
+        </td>
+    </tr>
+}
+
+</table>
