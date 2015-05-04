@@ -1599,4 +1599,128 @@ namespace InventaDataModul
         }
     }
     #endregion
+
+    #region Users
+
+    public partial class Repository
+    {
+        public IQueryable<Users> GetUsers
+        {
+            get { return Db.Users; }
+        }
+
+        public Users GetByIdUsers(string id)
+        {
+            return Db.Users.FirstOrDefault(t => t.Id == id);
+        }
+
+        public bool CreateUsers(Users instance)
+        {
+            if (instance.IdUser == 0)
+            {
+                Db.Users.InsertOnSubmit(instance);
+                Db.Users.Context.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool UpdateUsers(Users instance)
+        {
+
+            Users cache = Db.Users.FirstOrDefault(p => p.Id == instance.Id);
+            if (cache != null)
+            {
+
+
+                cache.UserName = instance.UserName;
+                
+                cache.IdUser = instance.IdUser;
+
+
+                Db.Users.Context.SubmitChanges();
+
+
+                if (instance.RoleAdmin)
+                {
+                    if (!cache.AspNetUserRoles.Any(m => m.AspNetRoles.Name == "admin"))
+                    {
+                        Db.AspNetUserRoles.InsertOnSubmit(new AspNetUserRoles() {UserId = instance.Id, RoleId = "1"});
+                   }
+                }
+                else
+                {
+                    if (cache.AspNetUserRoles.Any(m => m.AspNetRoles.Name == "admin"))
+                    {
+                        Db.AspNetUserRoles.DeleteOnSubmit(cache.AspNetUserRoles.First(m => m.AspNetRoles.Name == "admin"));
+                        }
+                }
+
+                if (instance.RoleUser)
+                {
+                    if (!cache.AspNetUserRoles.Any(m => m.AspNetRoles.Name == "user"))
+                    {
+                        Db.AspNetUserRoles.InsertOnSubmit(new AspNetUserRoles() { UserId = instance.Id, RoleId = "2" });
+                        }
+                }
+                else
+                {
+                    if (cache.AspNetUserRoles.Any(m => m.AspNetRoles.Name == "user"))
+                    {
+                        Db.AspNetUserRoles.DeleteOnSubmit(cache.AspNetUserRoles.First(m => m.AspNetRoles.Name == "user"));
+                        }
+                }
+
+                if (instance.RoleBoss)
+                {
+                    if (!cache.AspNetUserRoles.Any(m => m.AspNetRoles.Name == "boss"))
+                    {
+                        Db.AspNetUserRoles.InsertOnSubmit(new AspNetUserRoles() { UserId = instance.Id, RoleId = "3" });
+                        }
+                }
+                else
+                {
+                    if (cache.AspNetUserRoles.Any(m => m.AspNetRoles.Name == "boss"))
+                    {
+                        Db.AspNetUserRoles.DeleteOnSubmit(cache.AspNetUserRoles.First(m => m.AspNetRoles.Name == "boss"));
+                       }
+                }
+
+                if (instance.RoleEquipment)
+                {
+                    if (!cache.AspNetUserRoles.Any(m => m.AspNetRoles.Name == "equipment"))
+                    {
+                        Db.AspNetUserRoles.InsertOnSubmit(new AspNetUserRoles() { UserId = instance.Id, RoleId = "4" });
+                       }
+                }
+                else
+                {
+                    if (cache.AspNetUserRoles.Any(m => m.AspNetRoles.Name == "equipment"))
+                    {
+                        Db.AspNetUserRoles.DeleteOnSubmit(cache.AspNetUserRoles.First(m => m.AspNetRoles.Name == "equipment"));
+                        }
+                }
+                Db.AspNetUserRoles.Context.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool RemoveUsers(Users instance)
+        {
+            Users cache = Db.Users.FirstOrDefault(p => p.Id == instance.Id);
+            if (cache != null)
+            {
+                
+                Db.AspNetUserRoles.DeleteAllOnSubmit(cache.AspNetUserRoles);
+                Db.Users.DeleteOnSubmit(cache);
+                Db.Users.Context.SubmitChanges();
+                Db.AspNetUserRoles.Context.SubmitChanges();
+                return true;
+            }
+
+            return false;
+        }
+    }
+    #endregion
 }

@@ -4,7 +4,7 @@
 namespace MyNameSpace{
   class MyFirstGeneratedClass{
      public static void main (string[] args ){
-       System.Console.WriteLine("Hello, the time is now: 21.01.2015 18:12:12");
+       System.Console.WriteLine("Hello, the time is now: 04.05.2015 14:51:14");
 	   	 System.Console.Write(GetDataForTable("Rain"));
 		 System.Console.Write(GetDataForTable("Temperatur"));
 	     

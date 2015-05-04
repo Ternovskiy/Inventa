@@ -6,7 +6,6 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/bundles/css")
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -18,21 +17,36 @@
                     <span class="icon-bar"></span>
                 </button>
                 @*@Html.ActionLink("Инвента", "Index", "Home", null, new { @class = "navbar-brand" })*@
-                @Html.ActionLink(linkText: "Инвента", actionName: "Index",  routeValues: new { controller = "Home", area = "" }, htmlAttributes: new { @class = "navbar-brand" })
+                @Html.ActionLink(linkText: "Инвента", actionName: "Index", routeValues: new { controller = "Home", area = "" }, htmlAttributes: new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Главная", "Index", "Home")</li>
-                    <li>@Html.ActionLink("О программе", "About", "Home")</li>
-                    <li>@Html.ActionLink("Справка", "Contact", "Home")</li>*@
+                        <li>@Html.ActionLink("О программе", "About", "Home")</li>
+                        <li>@Html.ActionLink("Справка", "Contact", "Home")</li>*@
                     <li>
                         @{
-                            MvcHtmlString mvcHtmlString = Request.IsAuthenticated ?Html.ActionLink("Главная", "Index", new {controller = "Home", area = "Admin"}) :Html.ActionLink("Главная", "NoAutorize", new {controller = "Home", area = ""});
+                            MvcHtmlString mvcHtmlString;
+                            if (Request.IsAuthenticated)
+                            {
+                                if (User.IsInRole("admin"))
+                                {
+                                    mvcHtmlString = Html.ActionLink("Главная", "Index", new { controller = "Home", area = "Admin" });
+                                }
+                                else
+                                {
+                                    mvcHtmlString = Html.ActionLink("Главная", "NoAutorize", new { controller = "Home", area = "" });
+                                }
+                            }
+                            else
+                            {
+                                mvcHtmlString = Html.ActionLink("Главная", "NoAutorize", new { controller = "Home", area = "" });
+                            }
                         }
                         @mvcHtmlString
                     </li>
-                    
-                    
+
+
                     <li>@Html.ActionLink("О программе", "About", new { controller = "Home", area = "" })</li>
                     <li>@Html.ActionLink(linkText: "Справка", actionName: "Contact", routeValues: new { controller = "Home", area = "" })</li>
                 </ul>
@@ -47,16 +61,13 @@
             <p>&copy; @DateTime.Now.Year - Автоматизированная ситема учета сетевого оборудования "Инвента"</p>
         </footer>
     </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>
 
-
-
 @*@if (User.IsInRole("admin"))
-{
-    <li>@Html.ActionLink("Admin", "Index", new { area = "Admin", controller = "Home" })</li>
-}*@
+    {
+        <li>@Html.ActionLink("Admin", "Index", new { area = "Admin", controller = "Home" })</li>
+    }*@

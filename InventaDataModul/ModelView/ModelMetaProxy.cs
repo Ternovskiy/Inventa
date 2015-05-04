@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 
 namespace InventaDataModul
 {
@@ -655,6 +656,78 @@ namespace InventaDataModul
         public string Код_типа { get; set; }
 
 
+    }
+
+    #endregion
+
+    #region Users
+
+    [MetadataType(typeof(ModelViewUsers))]
+    public partial class Users
+    {
+        public string UserRoles
+        {
+            get
+            {
+                string s = "";
+                foreach (AspNetUserRoles item in AspNetUserRoles)
+                {
+                    s += item.AspNetRoles.Name+" ";
+                }
+                return s;
+            }
+        }
+
+       
+            
+        public bool RoleAdmin { get; set; }
+        public bool RoleUser
+        {
+            get;
+            set; 
+        }
+        public bool RoleBoss
+        {
+            get;
+            set; 
+        }
+        public bool RoleEquipment
+        {
+            get;
+            set; 
+        }
+    }
+
+
+    class ModelViewUsers
+    {
+
+
+        [Display(Name = "Имя пользователя")]
+        public string UserName { get; set; }
+
+
+        
+        [Display(Name = "PasswordHash")]
+        public string PasswordHash { get; set; }
+
+
+
+        [Display(Name = "SecurityStamp")]
+        public string SecurityStamp { get; set; }
+
+
+
+        [Display(Name = "Discriminator")]
+        public string Discriminator { get; set; }
+
+
+
+        [Display(Name = "Сотрудник")]
+        public string IdUser { get; set; }
+
+        [Display(Name = "Роли")]
+        public string UserRoles { get; set; }
     }
 
     #endregion

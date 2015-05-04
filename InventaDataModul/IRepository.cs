@@ -968,5 +968,42 @@ namespace InventaDataModul
         bool RemoveЖурнал(Журнал instance);
 
         #endregion
+
+        #region Users
+
+        /// <summary>
+        /// Набор таблиц Users
+        /// </summary>
+        IQueryable<Users> GetUsers { get; }
+
+        /// <summary>
+        /// Таблица Users по уникальному ключю
+        /// </summary>
+        /// <param name="id">Ключ таблицы Users</param>
+        /// <returns></returns>
+        Users GetByIdUsers(string id);
+
+        /// <summary>
+        /// Добавить в базу новый объект Users
+        /// </summary>
+        /// <param name="instance">Объект Users</param>
+        /// <returns></returns>
+        bool CreateUsers(Users instance);
+
+        /// <summary>
+        /// Редактировать объект Users
+        /// </summary>
+        /// <param name="instance">Объет Users</param>
+        /// <returns></returns>
+        bool UpdateUsers(Users instance);
+
+        /// <summary>
+        /// Удалить объет Users(удаляется по уникальному ключю)
+        /// </summary>
+        /// <param name="instance">Объект Users</param>
+        /// <returns></returns>
+        bool RemoveUsers(Users instance);
+
+        #endregion
     }
 }

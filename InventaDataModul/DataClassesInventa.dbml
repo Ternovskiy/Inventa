@@ -189,6 +189,7 @@
       <Column Name="Телефон" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="Физическое_лицо_Адрес" Member="Адрес" ThisKey="Код" OtherKey="Код_физического_лица" Type="Адрес" />
       <Association Name="Физическое_лицо_Фр__труд__договора" Member="Фр__труд__договора" ThisKey="Код" OtherKey="Код_физ__лица" Type="Фр__труд__договора" />
+      <Association Name="Физическое_лицо_AspNetUsers" Member="Users" ThisKey="Код" OtherKey="IdUser" Type="Users" />
     </Type>
   </Table>
   <Table Name="dbo.[Фр. труд. договора]" Member="Фр__труд__договора">
@@ -261,6 +262,33 @@
       <Column Name="[Номер состояния]" Member="Номер_состояния" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="Состояние_оборудования_Событие" Member="Событие" ThisKey="Номер" OtherKey="Код_состояния" Type="Событие" />
       <Association Name="Состояние_оборудования_Показатель" Member="Показатель" ThisKey="Номер" OtherKey="Код_состояния" Type="Показатель" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AspNetUsers" Member="Users">
+    <Type Name="Users">
+      <Column Name="Id" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PasswordHash" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SecurityStamp" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Discriminator" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="IdUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Users_AspNetUserRoles" Member="AspNetUserRoles" ThisKey="Id" OtherKey="UserId" Type="AspNetUserRoles" />
+      <Association Name="Физическое_лицо_AspNetUsers" Member="Физическое_лицо" ThisKey="IdUser" OtherKey="Код" Type="Физическое_лицо" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AspNetRoles" Member="AspNetRoles">
+    <Type Name="AspNetRoles">
+      <Column Name="Id" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="AspNetRoles_AspNetUserRoles" Member="AspNetUserRoles" ThisKey="Id" OtherKey="RoleId" Type="AspNetUserRoles" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AspNetUserRoles" Member="AspNetUserRoles">
+    <Type Name="AspNetUserRoles">
+      <Column Name="UserId" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="AspNetRoles_AspNetUserRoles" Member="AspNetRoles" ThisKey="RoleId" OtherKey="Id" Type="AspNetRoles" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="Users_AspNetUserRoles" Member="Users" ThisKey="UserId" OtherKey="Id" Type="Users" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
 </Database>
