@@ -1,13 +1,17 @@
-﻿<!DOCTYPE html>
+﻿@using System.Text
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - Inventa Application</title>
     @Styles.Render("~/bundles/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -25,48 +29,54 @@
                         <li>@Html.ActionLink("О программе", "About", "Home")</li>
                         <li>@Html.ActionLink("Справка", "Contact", "Home")</li>*@
                     <li>
-                        @{
-                            MvcHtmlString mvcHtmlString;
-                            if (Request.IsAuthenticated)
-                            {
-                                if (User.IsInRole("admin"))
-                                {
-                                    mvcHtmlString = Html.ActionLink("Главная", "Index", new { controller = "Home", area = "Admin" });
-                                }
-                                else
-                                {
-                                    mvcHtmlString = Html.ActionLink("Главная", "NoAutorize", new { controller = "Home", area = "" });
-                                }
-                            }
-                            else
-                            {
-                                mvcHtmlString = Html.ActionLink("Главная", "NoAutorize", new { controller = "Home", area = "" });
-                            }
-                        }
+    @{
+        MvcHtmlString mvcHtmlString;
+        if (Request.IsAuthenticated)
+        {
+            if (User.IsInRole("admin"))
+            {
+                mvcHtmlString = Html.ActionLink("Главная", "Index", new { controller = "Home", area = "Admin" });
+            }
+            else
+            {
+                mvcHtmlString = Html.ActionLink("Главная", "NoAutorize", new { controller = "Home", area = "" });
+            }
+        }
+        else
+        {
+            mvcHtmlString = Html.ActionLink("Главная", "NoAutorize", new { controller = "Home", area = "" });
+        }
+    }
                         @mvcHtmlString
+                        </li>
+                        @RenderSection("MainMenu", required: false)
+                    @if (Request.IsAuthenticated)
+                    {
+                    if (User.IsInRole("admin"))
+                    { 
+                    <li>
+                        @Html.ActionLink("Справочники", "Index", "Reference")
                     </li>
-
-
-                    <li>@Html.ActionLink("О программе", "About", new { controller = "Home", area = "" })</li>
-                    <li>@Html.ActionLink(linkText: "Справка", actionName: "Contact", routeValues: new { controller = "Home", area = "" })</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+                        }}
+                        <li>@Html.ActionLink("О программе", "About", new { controller = "Home", area = "" })</li>
+                        <li>@Html.ActionLink(linkText: "Справка", actionName: "Contact", routeValues: new { controller = "Home", area = "" })</li>
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Автоматизированная ситема учета сетевого оборудования "Инвента"</p>
-        </footer>
-    </div>
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-</body>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Автоматизированная ситема учета сетевого оборудования "Инвента"</p>
+            </footer>
+        </div>
+        @*@Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)*@
+    </body>
 </html>
-
 @*@if (User.IsInRole("admin"))
     {
         <li>@Html.ActionLink("Admin", "Index", new { area = "Admin", controller = "Home" })</li>

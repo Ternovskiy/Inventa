@@ -467,6 +467,10 @@ namespace InventaDataModul
     [MetadataType(typeof(ModelViewЛог))]
     public partial class Лог
     {
+        public string Представление
+        {
+            get { return Тег.Название + " " + Тип_лога.Название + " :" + Сообщение; }
+        }
     }
 
 
@@ -566,21 +570,23 @@ namespace InventaDataModul
         public string Название { get; set; }
 
         [Display(Name = "Дата")]
+        [DataType(DataType.Date)]
         public string Дата { get; set; }
 
         [Display(Name = "Описание")]
+        [DataType(DataType.MultilineText)]
         public string Описание { get; set; }
 
-        [Display(Name = "Код_хоста")]
+        [Display(Name = "Хоста")]
         public string Код_хоста { get; set; }
 
-        [Display(Name = "Код_фр__труд__дог_")]
+        [Display(Name = "Сотрудник")]
         public string Код_фр__труд__дог_ { get; set; }
 
-        [Display(Name = "Код_типа")]
+        [Display(Name = "Тип")]
         public string Код_типа { get; set; }
 
-        [Display(Name = "Код_оборудования")]
+        [Display(Name = "Оборудования")]
         public string Код_оборудования { get; set; }
 
 
@@ -611,27 +617,55 @@ namespace InventaDataModul
     [MetadataType(typeof(ModelViewСобытие))]
     public partial class Событие
     {
+        public string OptionsEvent { get; set; }
+
+        public Лог ModelЛог{ get; set; }
+
+        public Показатель ModelПоказатель { get; set; }
+
+        public string ViewEvent
+        {
+            get
+            {
+                string s = "";
+                try
+                {
+                foreach (var item in Состояние_оборудования.Показатель)
+                    s += item.Представление;
+                }
+                catch {}
+                try
+                {
+                s += Лог.Представление;
+                }
+                catch { }
+                return s;
+            }
+        }
+
     }
 
 
     class ModelViewСобытие
     {
         [Display(Name = "Дата")]
+        [DataType(DataType.Date)]
         public string Дата { get; set; }
-
+        
         [Display(Name = "Описание")]
+        [DataType(DataType.MultilineText)]
         public string Описание { get; set; }
 
-        [Display(Name = "Код_журнала")]
+        [Display(Name = "Журнал")]
         public string Код_журнала { get; set; }
 
-        [Display(Name = "Код_хоста")]
+        [Display(Name = "Хост")]
         public string Код_хоста { get; set; }
 
-        [Display(Name = "Код_лога")]
+        [Display(Name = "Лог")]
         public string Код_лога { get; set; }
 
-        [Display(Name = "Код_состояния")]
+        [Display(Name = "Состояние")]
         public string Код_состояния { get; set; }
 
 

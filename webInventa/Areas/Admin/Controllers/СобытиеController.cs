@@ -20,7 +20,58 @@ namespace webInventa.Areas.Admin.Controllers
         // GET: Admin/Событие/Create
         public ActionResult Create()
         {
-            return View();
+            
+            var drop1 = Repository.GetЕдиницы_измерения.Select(p => new SelectListItem
+            {
+                Value = p.Код.ToString(),
+                Text = p.Представление
+            }).ToList();
+            drop1.Add(new SelectListItem { Selected = true, Text = "-", Value = "" });
+            ViewBag.Drop1 = drop1;
+            ViewBag.Drop2 = new SelectList(Repository.GetВид_показателя, "Код", "Название");
+            ViewBag.Drop3 = new SelectList(Repository.GetТип_показателя, "Код", "Название");
+            //var Drop4 = new SelectList(Repository.GetПоказатель, "Код", "Представление").ToList();
+            var Drop4 = Repository.GetПоказатель.Select(p => new SelectListItem
+            {
+                Value = p.Код.ToString(),
+                Text = p.Представление
+            }).ToList();
+            Drop4.Add(new SelectListItem { Selected = true, Text = "-", Value = "" });
+            ViewBag.Drop4 = Drop4;
+            ViewBag.Drop5 = Repository.GetЖурнал.Select(
+                p => new SelectListItem
+                {
+                    Value = p.Номер.ToString(),
+                    Text = p.Название
+                }
+                ).ToList();
+
+            ViewBag.Drop6 = Repository.GetХост.Select(
+                p => new SelectListItem()
+                {
+                    Value = p.Номер.ToString(),
+                    Text = p.IP_адрес
+                }
+                ).ToList();
+
+            ViewBag.Drop7 = Repository.GetТег.Select(
+                p => new SelectListItem()
+                {
+                    Text = p.Название,
+                    Value = p.Код.ToString()
+                }
+                ).ToList();
+            ViewBag.Drop8 = Repository.GetТип_лога.Select(
+                p => new SelectListItem()
+                {
+                    Value = p.Код.ToString(),
+                    Text = p.Название
+                }
+                ).ToList();
+            var m = new Событие();
+            m.ModelЛог=new Лог();
+            m.ModelПоказатель=new Показатель();
+            return View(m);
         }
 
         // POST: Admin/Событие/Create

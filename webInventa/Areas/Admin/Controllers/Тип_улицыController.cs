@@ -33,13 +33,20 @@ namespace webInventa.Areas.Admin.Controllers
             {
                 // TODO: Add insert logic here
                 Repository.CreateТип_улицы(collection);
-
-                logger.Info(User.Identity.Name + " добавил в базу Тип_улицы.");
+                try
+                {logger.Info(User.Identity.Name + " добавил в базу Тип улицы("+collection.Название+").");
+                }
+                catch { }
+                
                 return RedirectToAction("Index");
             }
             catch(Exception ex)
             {
-                logger.Error(User.Identity.Name + " - " + ex.Message);
+                try
+                {logger.Error(User.Identity.Name + " - " + ex.Message);
+                }
+                catch{}
+                
                 ModelState.AddModelError("", ex.Message);
             }
             return View();
@@ -58,8 +65,13 @@ namespace webInventa.Areas.Admin.Controllers
             if (ModelState.IsValid)
             try
             {
-                // TODO: Add update logic here
+                var s = Repository.GetByIdТип_улицы(collection.Код).Название;
                 Repository.UpdateТип_улицы(collection);
+                try
+                {
+                    logger.Info(User.Identity.Name + " изменил в базе Тип улицы(" + s + " => " + collection.Название + ").");
+                }
+                catch { } 
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
@@ -83,6 +95,11 @@ namespace webInventa.Areas.Admin.Controllers
             {
                 // TODO: Add delete logic here
                 Repository.RemoveТип_улицы(collection);
+                try
+                {
+                    logger.Info(User.Identity.Name + " удалил в базе Тип улицы(" + collection.Код + ").");
+                }
+                catch { } 
                 return RedirectToAction("Index");
             }
             catch (Exception ex)

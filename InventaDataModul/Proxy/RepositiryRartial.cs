@@ -1488,8 +1488,25 @@ namespace InventaDataModul
         {
             if (instance.Код == 0)
             {
+                if (instance.OptionsEvent=="log")
+                {
+                    Db.Лог.InsertOnSubmit(instance.ModelЛог);
+                    Db.Лог.Context.SubmitChanges();
+                    instance.Код_лога = Db.Лог.First(p => p.Сообщение == instance.ModelЛог.Сообщение && p.Код_лога == instance.ModelЛог.Код_лога && p.Код_тега== instance.ModelЛог.Код_тега).Номер;
+                }
+                else
+                {
+                    Db.Состояние_оборудования.InsertOnSubmit(new Состояние_оборудования());
+                    Db.Состояние_оборудования.Context.SubmitChanges();
+                    
+                    int keyState = Db.Состояние_оборудования.Max(p => p.Номер);
+                    instance.ModelПоказатель.Код_состояния = keyState;
+                    Db.Показатель.InsertOnSubmit(instance.ModelПоказатель);
+                    instance.Код_состояния = keyState;
+                }
                 Db.Событие.InsertOnSubmit(instance);
                 Db.Событие.Context.SubmitChanges();
+                
                 return true;
             }
             return false;

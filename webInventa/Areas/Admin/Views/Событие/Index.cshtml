@@ -24,11 +24,9 @@
             @Html.DisplayNameFor(model => model.Код_хоста)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Код_лога)
+            Событие
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Код_состояния)
-        </th>
+       
         <th></th>
     </tr>
 
@@ -41,17 +39,15 @@
             @Html.DisplayFor(modelItem => item.Описание)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Код_журнала)
+            @Html.DisplayFor(modelItem => item.Журнал.Название)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Код_хоста)
+            @Html.DisplayFor(modelItem => item.Хост.IP_адрес)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Код_лога)
+            @Html.DisplayFor(modelItem => item.ViewEvent)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Код_состояния)
-        </td>
+        
         <td>
             @Html.ActionLink("Редактировать", "Edit", new { id=item.Код }) |            
             @Html.ActionLink("Удалить", "Delete", new { id=item.Код })

@@ -1,0 +1,63 @@
+﻿@model InventaDataModul.Событие
+
+@{
+    ViewBag.Title = "Удаление";
+}
+
+<h2>Delete</h2>
+
+<h3>Вы уверены что хотите удалить событие?</h3>
+<div>
+    <h4>Событие</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Дата)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Дата)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Описание)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Описание)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Код_журнала)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Журнал.Название)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Код_хоста)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Хост.IP_адрес)
+        </dd>
+        <dt>
+            Событие
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ViewEvent)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.HiddenFor(m => m.Код)
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn btn-default" /> |
+            @Html.ActionLink("Вернуться", "Index")
+        </div>
+    }
+</div>

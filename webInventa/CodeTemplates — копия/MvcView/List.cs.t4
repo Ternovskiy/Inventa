@@ -1,0 +1,276 @@
+﻿<#@ template language="C#" HostSpecific="True" #>
+<#@ output extension=".cshtml" #>
+<#@ include file="Imports.include.t4" #>
+@model IEnumerable<#= "<" + ViewDataTypeName + ">" #>
+<#
+// The following chained if-statement outputs the file header code and markup for a partial view, a view using a layout page, or a regular view.
+if(IsPartialView) {
+#>
+
+<#
+} else if(IsLayoutPageSelected) {
+#>
+
+@{
+    ViewBag.Title = "Список <#= ViewDataTypeShortName #>";
+<#
+if (!String.IsNullOrEmpty(LayoutPageFile)) {
+#>
+    Layout = "<#= LayoutPageFile#>";
+<#
+}
+#>
+}
+
+<h2>Список <#= ViewDataTypeShortName #></h2>
+
+<#
+} else {
+#>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title><#= ViewName #></title>
+</head>
+<body>
+<#
+    PushIndent("    ");
+}
+#>
+<p>
+    @Html.ActionLink("Создать", "Create")
+</p>
+<table class="table">
+    <tr>
+<#
+IEnumerable<PropertyMetadata> properties = ModelMetadata.Properties;
+foreach (PropertyMetadata property in properties) {
+    if (property.Scaffold && !property.IsPrimaryKey && !property.IsForeignKey) {
+#>
+<#
+        // We do not want to show any association properties for which there is
+        // no associated foreign key.
+        if (property.IsAssociation && GetRelatedModelMetadata(property) == null) {
+            continue;
+        }
+#>
+        <th>
+            @Html.DisplayNameFor(model => model.<#= GetValueExpression(property) #>)
+        </th>
+<#
+    }
+}
+#>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+<#
+foreach (PropertyMetadata property in properties) {
+    if (property.Scaffold && !property.IsPrimaryKey && !property.IsForeignKey) {
+#>
+<#
+        // We do not want to show any association properties for which there is
+        // no associated foreign key.
+        if (property.IsAssociation && GetRelatedModelMetadata(property) == null) {
+            continue;
+        }
+#>
+        <td>
+            @Html.DisplayFor(modelItem => <#= "item." + GetValueExpression(property) #>)
+        </td>
+<#
+    }
+}
+
+string pkName = GetPrimaryKeyName();
+if (pkName != null) {
+#>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.<#= pkName #> }) |            
+            @Html.ActionLink("Удалить", "Delete", new { id=item.<#= pkName #> })
+        </td>
+<#
+} else {
+#>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { /* id=item.PrimaryKey */ }) |            
+            @Html.ActionLink("Удалить", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+<#
+}
+#>
+    </tr>
+}
+
+</table>
+<#
+// The following code closes the tag used in the case of a view using a layout page and the body and html tags in the case of a regular view page
+#>
+<#
+if(!IsPartialView && !IsLayoutPageSelected) {
+    ClearIndent();
+#>
+</body>
+</html>
+<#
+}
+#>
+
+
+ @* 
+ 
+		#region <#= ViewDataTypeShortName #>
+        
+		/// <summary>
+        /// Набор таблиц <#= ViewDataTypeShortName #>
+        /// </summary>
+        IQueryable<<#= ViewDataTypeShortName #>> Get<#= ViewDataTypeShortName #> { get; }
+
+        /// <summary>
+        /// Таблица <#= ViewDataTypeShortName #> по уникальному ключю
+        /// </summary>
+        /// <param name="id">Ключ таблицы <#= ViewDataTypeShortName #></param>
+        /// <returns></returns>
+        <#= ViewDataTypeShortName #> GetById<#= ViewDataTypeShortName #>(int id);
+        
+        /// <summary>
+        /// Добавить в базу новый объект <#= ViewDataTypeShortName #>
+        /// </summary>
+        /// <param name="instance">Объект <#= ViewDataTypeShortName #></param>
+        /// <returns></returns>
+        bool Create<#= ViewDataTypeShortName #>(<#= ViewDataTypeShortName #> instance);
+
+        /// <summary>
+        /// Редактировать объект <#= ViewDataTypeShortName #>
+        /// </summary>
+        /// <param name="instance">Объет <#= ViewDataTypeShortName #></param>
+        /// <returns></returns>
+        bool Update<#= ViewDataTypeShortName #>(<#= ViewDataTypeShortName #> instance);
+
+        /// <summary>
+        /// Удалить объет <#= ViewDataTypeShortName #>(удаляется по уникальному ключю)
+        /// </summary>
+        /// <param name="instance">Объект <#= ViewDataTypeShortName #></param>
+        /// <returns></returns>
+        bool Remove<#= ViewDataTypeShortName #>(<#= ViewDataTypeShortName #> instance);
+        
+        #endregion
+===================================================================================================
+		#region <#= ViewDataTypeShortName #>
+
+		public partial class Repository
+		{
+        public IQueryable<<#= ViewDataTypeShortName #>> Get<#= ViewDataTypeShortName #>
+        {
+            get { return Db.<#= ViewDataTypeShortName #>; }
+        }
+
+        public <#= ViewDataTypeShortName #> GetById<#= ViewDataTypeShortName #>(int id)
+        {
+            return Db.<#= ViewDataTypeShortName #>.FirstOrDefault(t => t.<#= pkName #> == id);
+        }
+
+        public bool Create<#= ViewDataTypeShortName #>(<#= ViewDataTypeShortName #> instance)
+        {
+            if (instance.<#= pkName #>==0)
+            {
+                Db.<#= ViewDataTypeShortName #>.InsertOnSubmit(instance);
+                Db.<#= ViewDataTypeShortName #>.Context.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool Update<#= ViewDataTypeShortName #>(<#= ViewDataTypeShortName #> instance)
+        {
+
+            <#= ViewDataTypeShortName #> cache = Db.<#= ViewDataTypeShortName #>.FirstOrDefault(p => p.<#= pkName #> == instance.<#= pkName #>);
+            if (cache != null)
+            {
+			<#
+			foreach (PropertyMetadata property in properties) {
+				if (property.Scaffold && !property.IsPrimaryKey && !property.IsForeignKey) {
+			#>
+			<#
+        // We do not want to show any association properties for which there is
+        // no associated foreign key.
+        if (property.IsAssociation && GetRelatedModelMetadata(property) == null) {
+            continue;
+			}
+			#>        
+            cache.<#= GetValueExpression(property) #>= instance.<#= GetValueExpression(property) #>;
+        
+			<#
+			}
+			}
+			#>                
+                Db.<#= ViewDataTypeShortName #>.Context.SubmitChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool Remove<#= ViewDataTypeShortName #>(<#= ViewDataTypeShortName #> instance)
+        {
+            <#= ViewDataTypeShortName #> cache = Db.<#= ViewDataTypeShortName #>.FirstOrDefault(p => p.<#= pkName #> == instance.<#= pkName #>);
+            if (cache != null)
+            {
+                Db.<#= ViewDataTypeShortName #>.DeleteOnSubmit(cache);
+                Db.<#= ViewDataTypeShortName #>.Context.SubmitChanges();
+                return true;
+            }
+
+            return false;
+        }
+	}
+		#endregion
+==========================================================================================
+		#region <#= ViewDataTypeShortName #>
+
+	[MetadataType(typeof(ModelView<#= ViewDataTypeShortName #>))]
+		public partial class <#= ViewDataTypeShortName #>
+		{        
+		}
+
+    
+		class ModelView<#= ViewDataTypeShortName #>
+		{			
+			<#
+			foreach (PropertyMetadata property in properties) {
+				if (property.Scaffold && !property.IsPrimaryKey && !property.IsForeignKey) {
+			#>
+			<#
+        // We do not want to show any association properties for which there is
+        // no associated foreign key.
+        if (property.IsAssociation && GetRelatedModelMetadata(property) == null) {
+            continue;
+			}
+			#>
+			[Display(Name = "<#= GetValueExpression(property) #>")]
+	        public string <#= GetValueExpression(property) #> { get; set; }
+
+			<#
+			}
+			}
+			#> 
+	   }
+
+	   #endregion
+=============================================================================================
+  *@ 
+
+
+
+
+
+<#@ include file="ModelMetadataFunctions.cs.include.t4" #>
+

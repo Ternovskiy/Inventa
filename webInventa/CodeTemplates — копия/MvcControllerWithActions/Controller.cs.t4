@@ -1,0 +1,111 @@
+﻿<#@ template language="C#" HostSpecific="True" #>
+<#@ output extension="cs" #>
+<#@ import namespace="System" #>
+<#@ parameter type="System.String" name="ControllerName" #>
+<#@ parameter type="System.String" name="ControllerRootName" #>
+<#@ parameter type="System.String" name="Namespace" #>
+<#@ parameter type="System.String" name="AreaName" #>
+<#
+string routePrefix;
+string entitySetName=ControllerRootName;
+if (String.IsNullOrEmpty(AreaName)) 
+{
+    routePrefix = ControllerRootName;
+}
+else
+{	
+    routePrefix = AreaName + "/" + ControllerRootName;
+}
+#>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+
+namespace <#= Namespace #>
+{
+    public class <#= ControllerName #> : BaseController
+    {
+        // GET: <#= routePrefix #>
+        public ActionResult Index()
+        {	
+            return View(Repository.Get<#= entitySetName #>);
+        }		        
+
+        // GET: <#= routePrefix #>/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: <#= routePrefix #>/Create
+        [HttpPost]
+        public ActionResult Create(<#= entitySetName #> collection)
+        {
+            if (ModelState.IsValid)
+            try
+            {
+                Repository.Create<#= entitySetName #>(collection);
+				logger.Info(User.Identity.Name + " добавил в базу <#= entitySetName #>.");
+                return RedirectToAction("Index");
+            }
+            catch(Exception ex)
+            {
+				logger.Error(User.Identity.Name + " - " + ex.Message);
+                ModelState.AddModelError("", ex.Message);
+            }
+            return View();
+        }
+
+        // GET: <#= routePrefix #>/Edit/5
+        public ActionResult Edit(int id)
+        {
+            return View(Repository.GetById<#= entitySetName #>(id));
+        }
+
+        // POST: <#= routePrefix #>/Edit/5
+        [HttpPost]
+        public ActionResult Edit(<#= entitySetName #> collection)
+        {
+            if (ModelState.IsValid)
+            try
+            {
+                logger.Info(User.Identity.Name + " изменил в базе <#= entitySetName #>.");
+                Repository.Update<#= entitySetName #>(collection);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+				logger.Error(User.Identity.Name + " - " + ex.Message);
+                ModelState.AddModelError("", ex.Message);
+            }
+            return View();
+        }
+
+        // GET: <#= routePrefix #>/Delete/5
+        public ActionResult Delete(int id)
+        {
+            return View(Repository.GetById<#= entitySetName #>(id));
+        }
+
+        // POST: <#= routePrefix #>/Delete/5
+        [HttpPost]
+        public ActionResult Delete(<#= entitySetName #> collection)
+        {
+            try
+            {
+                logger.Info(User.Identity.Name + " удалил в базе <#= entitySetName #>.");
+                Repository.Remove<#= entitySetName #>(collection);
+                return RedirectToAction("Index");
+            }
+            catch (Exception ex)
+            {
+				logger.Error(User.Identity.Name + " - " + ex.Message);
+                ModelState.AddModelError("", ex.Message);
+                return View();
+            }
+        }
+    }
+}

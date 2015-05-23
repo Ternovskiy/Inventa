@@ -13,43 +13,54 @@ namespace webInventa.Test
         public MockRepository(MockBehavior mockBehavior = MockBehavior.Strict)
             : base(mockBehavior)
         {
-            
             GenerateUsers();
-
         }
     }
-
 
     public partial class MockRepository
     {
         public List<Тип_улицы> ListТип_улицы { get; set; }
-
         public void GenerateUsers()
-        {
+        {//Список для хранения переменных
             ListТип_улицы = new List<Тип_улицы>();
-
+            //Добавление двух типов улиц
             ListТип_улицы.Add(
                 new Тип_улицы()
                 {
                     Код = 1,
-                    Название = "Терешклвой"
+                    Название = "Проспект"
                 }
                 );
-
-
             ListТип_улицы.Add(
                 new Тип_улицы()
                 {
                     Код = 2,
-                    Название = "Победы"
+                    Название = "Улица"
                 }
                 );
-            
-
-            this.Setup(p => p.GetТип_улицы).Returns(ListТип_улицы.AsQueryable());
-            Setup(p => p.GetByIdТип_улицы(It.IsAny<int>())).Returns((int id) => 
+            //Установка функции получить все 
+            Setup(p => p.GetТип_улицы).Returns(ListТип_улицы.AsQueryable());
+            //Установка функции получить по уник. индент.
+            Setup(p => p.GetByIdТип_улицы(It.IsAny<int>())).Returns((int id) =>
                 ListТип_улицы.FirstOrDefault(p => p.Код == id));
-            
+            //Установка функции добавления 
+            Setup(p => p.CreateТип_улицы(It.IsAny<Тип_улицы>())).Returns((Тип_улицы instance) =>
+            {
+                ListТип_улицы.Add(instance);
+                return true;
+            });
+            //Установка функции удаления
+            Setup(p => p.UpdateТип_улицы(It.IsAny<Тип_улицы>())).Returns((Тип_улицы instance) =>
+            {
+                ListТип_улицы.First(p=>p.Код==instance.Код).Название=instance.Название;
+                return true;
+            });
+            //Установка функции редактирования
+            Setup(p => p.RemoveТип_улицы(It.IsAny<Тип_улицы>())).Returns((Тип_улицы instance) =>
+            {
+                ListТип_улицы.Remove(instance);
+                return true;
+            });
         }
     }
 }

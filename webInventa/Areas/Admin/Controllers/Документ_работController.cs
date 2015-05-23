@@ -20,6 +20,33 @@ namespace webInventa.Areas.Admin.Controllers
         // GET: Admin/Документ_работ/Create
         public ActionResult Create()
         {
+            ViewBag.Drop1 = Repository.GetФр__труд__договора.Select(p =>
+                new SelectListItem
+                {
+                    Text = p.Физическое_лицо.ФамилияИО,
+                    Value = p.Номер.ToString()
+                }).ToList();
+
+            ViewBag.Drop2 = Repository.GetТип_работ.Select(p =>
+                new SelectListItem
+                {
+                    Text = p.Название,
+                    Value = p.Код.ToString()
+                }).ToList();
+
+            ViewBag.Drop3 = Repository.GetОборудование.Select(p =>
+                new SelectListItem
+                {
+                    Text = p.Номер.ToString(),
+                    Value = p.Номер.ToString()
+                }).ToList();
+            ViewBag.Drop4 = Repository.GetХост.Select(p =>
+                new SelectListItem
+                {
+                    Text = p.IP_адрес,
+                    Value = p.Номер.ToString()
+                }).ToList();
+
             return View();
         }
 
