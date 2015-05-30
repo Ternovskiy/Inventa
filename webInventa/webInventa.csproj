@@ -250,6 +250,7 @@
     <Compile Include="Areas\Admin\Controllers\Фр__труд__договораController.cs" />
     <Compile Include="Areas\Admin\Controllers\ХостController.cs" />
     <Compile Include="Areas\Admin\Controllers\Юридическое_лицоController.cs" />
+    <Compile Include="Areas\Admin\Models\ModelPrediction.cs" />
     <Compile Include="Areas\Equipment\Controllers\HomeController.cs" />
     <Compile Include="Areas\Equipment\EquipmentAreaRegistration.cs" />
     <Compile Include="Areas\UserBoss\Controllers\HomeController.cs" />
@@ -429,6 +430,9 @@
     <Content Include="Areas\Admin\Views\Событие\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Лог\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Событие\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Прогноз\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Прогноз\Seting.cshtml" />
+    <Content Include="Areas\Admin\Views\Событие\Edit.cshtml" />
     <None Include="BundleTransformer.Configuration.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -491,9 +495,7 @@
     <Content Include="Views\Home\NoAutorize.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Default\" />
-    <Folder Include="Areas\Admin\Views\Прогноз\" />
     <Folder Include="Areas\Equipment\Models\" />
     <Folder Include="Areas\Equipment\Views\Home\" />
     <Folder Include="Areas\Equipment\Views\Shared\" />

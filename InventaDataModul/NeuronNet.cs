@@ -134,6 +134,10 @@ namespace InventaDataModul
 
     public class NeuronNet
     {
+        public NeuronNet()
+        {
+        }
+
         public NeuronNet(int[] V)
         {
             Net = new NeuronLayer[V.Length - 1];
@@ -333,6 +337,9 @@ namespace InventaDataModul
             }
             return er;
         }
+
+
+        
 
         #endregion
 

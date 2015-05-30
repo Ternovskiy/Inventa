@@ -1,4 +1,5 @@
 using InventaDataModul;
+using webInventa.Areas.Admin.Models;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(webInventa.App_Start.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(webInventa.App_Start.NinjectWebCommon), "Stop")]
@@ -65,6 +66,9 @@ namespace webInventa.App_Start
         {
             kernel.Bind<DataClassesInventaDataContext>().To<DataClassesInventaDataContext>();
             kernel.Bind<IRepository>().To<Repository>().InRequestScope();
+
+            kernel.Bind<NeuronNet>().To<NeuronNet>().InSingletonScope();
+            kernel.Bind<ModelPrediction>().To<ModelPrediction>().InSingletonScope();
         }        
     }
 }

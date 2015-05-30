@@ -60,9 +60,6 @@ namespace InventaDataModul
     partial void InsertСобытие(Событие instance);
     partial void UpdateСобытие(Событие instance);
     partial void DeleteСобытие(Событие instance);
-    partial void InsertТег(Тег instance);
-    partial void UpdateТег(Тег instance);
-    partial void DeleteТег(Тег instance);
     partial void InsertТип_журнала(Тип_журнала instance);
     partial void UpdateТип_журнала(Тип_журнала instance);
     partial void DeleteТип_журнала(Тип_журнала instance);
@@ -117,6 +114,9 @@ namespace InventaDataModul
     partial void InsertAspNetUserRoles(AspNetUserRoles instance);
     partial void UpdateAspNetUserRoles(AspNetUserRoles instance);
     partial void DeleteAspNetUserRoles(AspNetUserRoles instance);
+    partial void InsertТег(Тег instance);
+    partial void UpdateТег(Тег instance);
+    partial void DeleteТег(Тег instance);
     #endregion
 		
 		public DataClassesInventaDataContext() : 
@@ -226,14 +226,6 @@ namespace InventaDataModul
 			get
 			{
 				return this.GetTable<Событие>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Тег> Тег
-		{
-			get
-			{
-				return this.GetTable<Тег>();
 			}
 		}
 		
@@ -378,6 +370,14 @@ namespace InventaDataModul
 			get
 			{
 				return this.GetTable<AspNetUserRoles>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Тег> Тег
+		{
+			get
+			{
+				return this.GetTable<Тег>();
 			}
 		}
 	}
@@ -2002,9 +2002,9 @@ namespace InventaDataModul
 		
 		private EntitySet<Событие> _Событие;
 		
-		private EntityRef<Тег> _Тег;
-		
 		private EntityRef<Тип_лога> _Тип_лога;
+		
+		private EntityRef<Тег> _Тег;
 		
     #region Определения метода расширяемости
     partial void OnLoaded();
@@ -2023,8 +2023,8 @@ namespace InventaDataModul
 		public Лог()
 		{
 			this._Событие = new EntitySet<Событие>(new Action<Событие>(this.attach_Событие), new Action<Событие>(this.detach_Событие));
-			this._Тег = default(EntityRef<Тег>);
 			this._Тип_лога = default(EntityRef<Тип_лога>);
+			this._Тег = default(EntityRef<Тег>);
 			OnCreated();
 		}
 		
@@ -2121,40 +2121,6 @@ namespace InventaDataModul
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Тег_Лог", Storage="_Тег", ThisKey="Код_тега", OtherKey="Код", IsForeignKey=true)]
-		public Тег Тег
-		{
-			get
-			{
-				return this._Тег.Entity;
-			}
-			set
-			{
-				Тег previousValue = this._Тег.Entity;
-				if (((previousValue != value) 
-							|| (this._Тег.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Тег.Entity = null;
-						previousValue.Лог.Remove(this);
-					}
-					this._Тег.Entity = value;
-					if ((value != null))
-					{
-						value.Лог.Add(this);
-						this._Код_тега = value.Код;
-					}
-					else
-					{
-						this._Код_тега = default(int);
-					}
-					this.SendPropertyChanged("Тег");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Тип_лога_Лог", Storage="_Тип_лога", ThisKey="Код_лога", OtherKey="Код", IsForeignKey=true)]
 		public Тип_лога Тип_лога
 		{
@@ -2185,6 +2151,40 @@ namespace InventaDataModul
 						this._Код_лога = default(int);
 					}
 					this.SendPropertyChanged("Тип_лога");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Тег_Лог", Storage="_Тег", ThisKey="Код_тега", OtherKey="Код", IsForeignKey=true)]
+		public Тег Тег
+		{
+			get
+			{
+				return this._Тег.Entity;
+			}
+			set
+			{
+				Тег previousValue = this._Тег.Entity;
+				if (((previousValue != value) 
+							|| (this._Тег.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Тег.Entity = null;
+						previousValue.Лог.Remove(this);
+					}
+					this._Тег.Entity = value;
+					if ((value != null))
+					{
+						value.Лог.Add(this);
+						this._Код_тега = value.Код;
+					}
+					else
+					{
+						this._Код_тега = default(int);
+					}
+					this.SendPropertyChanged("Тег");
 				}
 			}
 		}
@@ -2748,144 +2748,6 @@ namespace InventaDataModul
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Тег")]
-	public partial class Тег : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Код;
-		
-		private string _Название;
-		
-		private string _Описание;
-		
-		private EntitySet<Лог> _Лог;
-		
-    #region Определения метода расширяемости
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnКодChanging(int value);
-    partial void OnКодChanged();
-    partial void OnНазваниеChanging(string value);
-    partial void OnНазваниеChanged();
-    partial void OnОписаниеChanging(string value);
-    partial void OnОписаниеChanged();
-    #endregion
-		
-		public Тег()
-		{
-			this._Лог = new EntitySet<Лог>(new Action<Лог>(this.attach_Лог), new Action<Лог>(this.detach_Лог));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Код", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Код
-		{
-			get
-			{
-				return this._Код;
-			}
-			set
-			{
-				if ((this._Код != value))
-				{
-					this.OnКодChanging(value);
-					this.SendPropertyChanging();
-					this._Код = value;
-					this.SendPropertyChanged("Код");
-					this.OnКодChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Название", DbType="NChar(10) NOT NULL", CanBeNull=false)]
-		public string Название
-		{
-			get
-			{
-				return this._Название;
-			}
-			set
-			{
-				if ((this._Название != value))
-				{
-					this.OnНазваниеChanging(value);
-					this.SendPropertyChanging();
-					this._Название = value;
-					this.SendPropertyChanged("Название");
-					this.OnНазваниеChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Описание", DbType="NChar(10)")]
-		public string Описание
-		{
-			get
-			{
-				return this._Описание;
-			}
-			set
-			{
-				if ((this._Описание != value))
-				{
-					this.OnОписаниеChanging(value);
-					this.SendPropertyChanging();
-					this._Описание = value;
-					this.SendPropertyChanged("Описание");
-					this.OnОписаниеChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Тег_Лог", Storage="_Лог", ThisKey="Код", OtherKey="Код_тега")]
-		public EntitySet<Лог> Лог
-		{
-			get
-			{
-				return this._Лог;
-			}
-			set
-			{
-				this._Лог.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_Лог(Лог entity)
-		{
-			this.SendPropertyChanging();
-			entity.Тег = this;
-		}
-		
-		private void detach_Лог(Лог entity)
-		{
-			this.SendPropertyChanging();
-			entity.Тег = null;
 		}
 	}
 	
@@ -4082,7 +3944,7 @@ namespace InventaDataModul
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Физическое_лицо_AspNetUsers", Storage="_Users", ThisKey="Код", OtherKey="IdUser")]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Физическое_лицо_Users", Storage="_Users", ThisKey="Код", OtherKey="IdUser")]
 		public EntitySet<Users> Users
 		{
 			get
@@ -5908,7 +5770,7 @@ namespace InventaDataModul
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Физическое_лицо_AspNetUsers", Storage="_Физическое_лицо", ThisKey="IdUser", OtherKey="Код", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Физическое_лицо_Users", Storage="_Физическое_лицо", ThisKey="IdUser", OtherKey="Код", IsForeignKey=true)]
 		public Физическое_лицо Физическое_лицо
 		{
 			get
@@ -6254,6 +6116,144 @@ namespace InventaDataModul
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Тег")]
+	public partial class Тег : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Код;
+		
+		private string _Название;
+		
+		private string _Описание;
+		
+		private EntitySet<Лог> _Лог;
+		
+    #region Определения метода расширяемости
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnКодChanging(int value);
+    partial void OnКодChanged();
+    partial void OnНазваниеChanging(string value);
+    partial void OnНазваниеChanged();
+    partial void OnОписаниеChanging(string value);
+    partial void OnОписаниеChanged();
+    #endregion
+		
+		public Тег()
+		{
+			this._Лог = new EntitySet<Лог>(new Action<Лог>(this.attach_Лог), new Action<Лог>(this.detach_Лог));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Код", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Код
+		{
+			get
+			{
+				return this._Код;
+			}
+			set
+			{
+				if ((this._Код != value))
+				{
+					this.OnКодChanging(value);
+					this.SendPropertyChanging();
+					this._Код = value;
+					this.SendPropertyChanged("Код");
+					this.OnКодChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Название", DbType="NChar(128) NOT NULL", CanBeNull=false)]
+		public string Название
+		{
+			get
+			{
+				return this._Название;
+			}
+			set
+			{
+				if ((this._Название != value))
+				{
+					this.OnНазваниеChanging(value);
+					this.SendPropertyChanging();
+					this._Название = value;
+					this.SendPropertyChanged("Название");
+					this.OnНазваниеChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Описание", DbType="NChar(256)")]
+		public string Описание
+		{
+			get
+			{
+				return this._Описание;
+			}
+			set
+			{
+				if ((this._Описание != value))
+				{
+					this.OnОписаниеChanging(value);
+					this.SendPropertyChanging();
+					this._Описание = value;
+					this.SendPropertyChanged("Описание");
+					this.OnОписаниеChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Тег_Лог", Storage="_Лог", ThisKey="Код", OtherKey="Код_тега")]
+		public EntitySet<Лог> Лог
+		{
+			get
+			{
+				return this._Лог;
+			}
+			set
+			{
+				this._Лог.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Лог(Лог entity)
+		{
+			this.SendPropertyChanging();
+			entity.Тег = this;
+		}
+		
+		private void detach_Лог(Лог entity)
+		{
+			this.SendPropertyChanging();
+			entity.Тег = null;
 		}
 	}
 }

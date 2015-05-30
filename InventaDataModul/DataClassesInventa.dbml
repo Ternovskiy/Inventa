@@ -84,8 +84,8 @@
       <Column Name="[Код тега]" Member="Код_тега" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="[Код лога]" Member="Код_лога" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Лог_Событие" Member="Событие" ThisKey="Номер" OtherKey="Код_лога" Type="Событие" />
-      <Association Name="Тег_Лог" Member="Тег" ThisKey="Код_тега" OtherKey="Код" Type="Тег" IsForeignKey="true" />
       <Association Name="Тип_лога_Лог" Member="Тип_лога" ThisKey="Код_лога" OtherKey="Код" Type="Тип_лога" IsForeignKey="true" />
+      <Association Name="Тег_Лог" Member="Тег" ThisKey="Код_тега" OtherKey="Код" Type="Тег" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.[Населенный пункт]" Member="Населенный_пункт">
@@ -110,14 +110,6 @@
       <Association Name="Лог_Событие" Member="Лог" ThisKey="Код_лога" OtherKey="Номер" Type="Лог" IsForeignKey="true" />
       <Association Name="Хост_Событие" Member="Хост" ThisKey="Код_хоста" OtherKey="Номер" Type="Хост" IsForeignKey="true" />
       <Association Name="Состояние_оборудования_Событие" Member="Состояние_оборудования" ThisKey="Код_состояния" OtherKey="Номер" Type="Состояние_оборудования" IsForeignKey="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Тег" Member="Тег">
-    <Type Name="Тег">
-      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Название" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
-      <Column Name="Описание" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
-      <Association Name="Тег_Лог" Member="Лог" ThisKey="Код" OtherKey="Код_тега" Type="Лог" />
     </Type>
   </Table>
   <Table Name="dbo.[Тип журнала]" Member="Тип_журнала">
@@ -189,7 +181,7 @@
       <Column Name="Телефон" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="Физическое_лицо_Адрес" Member="Адрес" ThisKey="Код" OtherKey="Код_физического_лица" Type="Адрес" />
       <Association Name="Физическое_лицо_Фр__труд__договора" Member="Фр__труд__договора" ThisKey="Код" OtherKey="Код_физ__лица" Type="Фр__труд__договора" />
-      <Association Name="Физическое_лицо_AspNetUsers" Member="Users" ThisKey="Код" OtherKey="IdUser" Type="Users" />
+      <Association Name="Физическое_лицо_Users" Member="Users" ThisKey="Код" OtherKey="IdUser" Type="Users" />
     </Type>
   </Table>
   <Table Name="dbo.[Фр. труд. договора]" Member="Фр__труд__договора">
@@ -273,7 +265,7 @@
       <Column Name="Discriminator" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
       <Column Name="IdUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Users_AspNetUserRoles" Member="AspNetUserRoles" ThisKey="Id" OtherKey="UserId" Type="AspNetUserRoles" />
-      <Association Name="Физическое_лицо_AspNetUsers" Member="Физическое_лицо" ThisKey="IdUser" OtherKey="Код" Type="Физическое_лицо" IsForeignKey="true" />
+      <Association Name="Физическое_лицо_Users" Member="Физическое_лицо" ThisKey="IdUser" OtherKey="Код" Type="Физическое_лицо" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.AspNetRoles" Member="AspNetRoles">
@@ -289,6 +281,14 @@
       <Column Name="RoleId" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Association Name="AspNetRoles_AspNetUserRoles" Member="AspNetRoles" ThisKey="RoleId" OtherKey="Id" Type="AspNetRoles" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Users_AspNetUserRoles" Member="Users" ThisKey="UserId" OtherKey="Id" Type="Users" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Тег" Member="Тег">
+    <Type Name="Тег">
+      <Column Name="Код" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Название" Type="System.String" DbType="NChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="Описание" Type="System.String" DbType="NChar(256)" CanBeNull="true" />
+      <Association Name="Тег_Лог" Member="Лог" ThisKey="Код" OtherKey="Код_тега" Type="Лог" />
     </Type>
   </Table>
 </Database>

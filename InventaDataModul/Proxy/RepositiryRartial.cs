@@ -1488,13 +1488,13 @@ namespace InventaDataModul
         {
             if (instance.Код == 0)
             {
-                if (instance.OptionsEvent=="log")
+                if (instance.OptionsEvent == "log" || instance.OptionsEvent == "stateandlog")
                 {
                     Db.Лог.InsertOnSubmit(instance.ModelЛог);
                     Db.Лог.Context.SubmitChanges();
                     instance.Код_лога = Db.Лог.First(p => p.Сообщение == instance.ModelЛог.Сообщение && p.Код_лога == instance.ModelЛог.Код_лога && p.Код_тега== instance.ModelЛог.Код_тега).Номер;
                 }
-                else
+                if (instance.OptionsEvent == "state" || instance.OptionsEvent == "stateandlog")
                 {
                     Db.Состояние_оборудования.InsertOnSubmit(new Состояние_оборудования());
                     Db.Состояние_оборудования.Context.SubmitChanges();

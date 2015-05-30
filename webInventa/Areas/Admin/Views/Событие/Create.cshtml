@@ -16,6 +16,11 @@
                 $("#divLog").hide();
             });
 
+            $("#optionsRadios3").change(function () {
+                $("#divState").show();
+                $("#divLog").show();
+            });
+
             $("#divState").hide();
         }
     );
@@ -42,6 +47,12 @@
             <label>
                 <input type="radio" name="OptionsEvent" id="optionsRadios2" value="state">
                 Событие состояние
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="OptionsEvent" id="optionsRadios3" value="stateandlog">
+                Событие состояние и лог
             </label>
         </div>
         <div class="form-group">
